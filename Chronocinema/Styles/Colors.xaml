@@ -1,0 +1,21 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <Color x:Key="DarkOcean">#FF09122C</Color>
+    <Color x:Key="PurpleBlue">#FF2A004E</Color>
+    <Color x:Key="White">#FFFFFFFF</Color>
+    <Color x:Key="LightPurple">#FF7A73D1</Color>
+    <Color x:Key="Transparent">#00000000</Color>
+    <Color x:Key="CardBackground">#FF1E2A47</Color>
+    <Color x:Key="SelectedItem">#3D7A73D1</Color>
+
+    <Color x:Key="Completed">#00A42C</Color>
+    <Color x:Key="Watching">#FFD700</Color>
+    <Color x:Key="Planning">#F06582</Color>
+    <Color x:Key="Paused">#A786F5</Color>
+    <Color x:Key="Dropped">#666F79</Color>
+
+    <Color x:Key="Gray">#FFBDC3C7</Color>
+    <Color x:Key="LightBlack">#FFFAFAFA</Color>
+    
+</ResourceDictionary>

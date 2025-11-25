@@ -1,0 +1,181 @@
+﻿<Window x:Class="Chronocinema.Windows.DetailWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chronocinema.Windows"
+        mc:Ignorable="d"
+        Style="{StaticResource WindowStyle}">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <!-- Top App Bar -->
+            <RowDefinition Height="Auto"/>
+            <!-- Main Content -->
+            <RowDefinition Height="*"/>
+            <!-- Bottom App Bar -->
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <!-- Top App Bar -->
+        <Border Grid.Row="0" Style="{StaticResource TopAppBarStyle}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                
+                <!-- Back Button -->
+                <Button Grid.Column="0" 
+                        Style="{StaticResource IconButtonStyle}" 
+                        Command="{Binding GoBackCommand}" 
+                        Margin="10,0">
+                    <Image Source="/Chronocinema;component/Images/back-arrow.png"/>
+                </Button>
+                
+                <!-- Movie Title -->
+                <TextBlock Grid.Column="1" Text="{Binding MediaItem.Title}" 
+                           Style="{StaticResource HeaderText}" 
+                           VerticalAlignment="Center" 
+                           TextTrimming="CharacterEllipsis" 
+                           Margin="10,0"/>
+                
+                <!-- Edit Button -->
+                <Button Grid.Column="2"
+                        Style="{StaticResource IconButtonStyle}"
+                        Command="{Binding EditMediaCommand}"
+                        Margin="10,0">
+                    <Image Source="/Chronocinema;component/Images/edit.png"/>
+                </Button>
+            </Grid>
+        </Border>
+        
+        <!-- Main Content -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden">
+            <StackPanel Margin="16">
+                
+                <!-- Poster and Status -->
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,0,0,20">
+                    <!-- Movie Poster -->
+                    <Border Style="{StaticResource MovieDetailPosterBorderStyle}">
+                        <Image Source="{Binding MediaItem.PosterUrl}" Stretch="UniformToFill">
+                            <Image.Clip>
+                                <RectangleGeometry Rect="0,0,140,200" RadiusX="6" RadiusY="6"/>
+                            </Image.Clip>
+                        </Image>
+                    </Border>
+                    <!-- Watch Status -->
+                    <Border Style="{StaticResource StatusBadgeStyle}" HorizontalAlignment="Center">
+                        <TextBlock Text="{Binding MediaItem.Status}"
+                                   Style="{StaticResource StatusTextStyle}"/>
+                    </Border>
+                </StackPanel>
+                
+                <!-- Movie Detail -->
+                <StackPanel Orientation="Vertical" >
+
+                    <!-- Rating -->
+                    <StackPanel Style="{StaticResource InfoStackPanelStyle}">
+                        <TextBlock Text="Rating: " Style="{StaticResource DetailLabelTextStyle}"/>
+                        <TextBlock Text="{Binding MediaItem.Rating, StringFormat={}{0:F1}/10}" Style="{StaticResource DetailValueTextStyle}"/>
+                    </StackPanel>
+
+                    <!-- Start Date -->
+                    <StackPanel Style="{StaticResource InfoStackPanelStyle}">
+                        <TextBlock Text="Start Date: " Style="{StaticResource DetailLabelTextStyle}"/>
+                        <TextBlock Text="{Binding MediaItem.StartDate, StringFormat={}{0:dd.MM.yyyy}}" Style="{StaticResource DetailValueTextStyle}"/>
+                    </StackPanel>
+
+                    <!-- End Date -->
+                    <StackPanel Style="{StaticResource InfoStackPanelStyle}">
+                        <TextBlock Text="End Date: " Style="{StaticResource DetailLabelTextStyle}"/>
+                        <TextBlock Text="{Binding MediaItem.EndDate, StringFormat={}{0:dd.MM.yyyy}}" Style="{StaticResource DetailValueTextStyle}"/>
+                    </StackPanel>
+
+                    <!-- Type -->
+                    <StackPanel Style="{StaticResource InfoStackPanelStyle}">
+                        <TextBlock Text="Type: " Style="{StaticResource DetailLabelTextStyle}"/>
+                        <TextBlock Text="{Binding MediaItem.Type}" Style="{StaticResource DetailValueTextStyle}"/>
+                    </StackPanel>
+
+                    <!-- Year -->
+                    <StackPanel Style="{StaticResource InfoStackPanelStyle}">
+                        <TextBlock Text="Year: " Style="{StaticResource DetailLabelTextStyle}"/>
+                        <TextBlock Text="{Binding MediaItem.Year}" Style="{StaticResource DetailValueTextStyle}"/>
+                    </StackPanel>
+
+                    <!-- Genre -->
+                    <StackPanel Style="{StaticResource InfoStackPanelStyle}">
+                        <TextBlock Text="Genre: " Style="{StaticResource DetailLabelTextStyle}"/>
+                        <TextBlock Text="{Binding MediaItem.Genre}" Style="{StaticResource DetailValueTextStyle}" TextWrapping="Wrap"/>
+                    </StackPanel>
+
+                    <!-- Country -->
+                    <StackPanel Style="{StaticResource InfoStackPanelStyle}">
+                        <TextBlock Text="Country: " Style="{StaticResource DetailLabelTextStyle}"/>
+                        <TextBlock Text="{Binding MediaItem.Country}" Style="{StaticResource DetailValueTextStyle}" TextWrapping="Wrap"/>
+                    </StackPanel>
+
+                    <!-- Language -->
+                    <StackPanel Style="{StaticResource InfoStackPanelStyle}">
+                        <TextBlock Text="Language: " Style="{StaticResource DetailLabelTextStyle}"/>
+                        <TextBlock Text="{Binding MediaItem.Language}" Style="{StaticResource DetailValueTextStyle}" TextWrapping="Wrap"/>
+                    </StackPanel>
+
+                </StackPanel>
+                
+                <!-- Notes Section -->
+                <Border Style="{StaticResource NotesSectionBorderStyle}">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Notes" Style="{StaticResource SectionHeaderTextStyle}" Margin="0,0,0,5"/>
+                        <TextBlock Text="{Binding MediaItem.Notes}" Style="{StaticResource NotesTextStyle}" TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Border>
+
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- Bottom App Bar -->
+        <Border Grid.Row="2" Style="{StaticResource BottomAppBarStyle}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Home Nav Item -->
+                <StackPanel Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Border Style="{StaticResource NavItemSelectedContainerStyle}">
+                        <Button Style="{StaticResource IconButtonStyle}" Command="{Binding NavigateHomeCommand}">
+                            <Image Source="../Images/home.png"/>
+                        </Button>
+                    </Border>
+                    <TextBlock Text="Home" Style="{StaticResource NavItemText}" Margin="0,2,0,0"/>
+                </StackPanel>
+
+                <!-- Add Nav Item -->
+                <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Border Style="{StaticResource NavItemContainerStyle}">
+                        <Button Style="{StaticResource IconButtonStyle}" Command="{Binding ShowAddMediaCommand}">
+                            <Image Source="../Images/add.png"/>
+                        </Button>
+                    </Border>
+                    <TextBlock Text="Add" Style="{StaticResource NavItemText}" Margin="0,2,0,0"/>
+                </StackPanel>
+
+                <!-- Watchlist Nav Item -->
+                <StackPanel Grid.Column="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Border Style="{StaticResource NavItemContainerStyle}">
+                        <Button Style="{StaticResource IconButtonStyle}" Command="{Binding NavigateWatchlistCommand}">
+                            <Image Source="../Images/watchlist.png"/>
+                        </Button>
+                    </Border>
+                    <TextBlock Text="Watchlist" Style="{StaticResource NavItemText}" Margin="0,2,0,0"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+    </Grid>
+</Window>

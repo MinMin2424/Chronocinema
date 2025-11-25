@@ -9,10 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Image\add.png" />
-    <None Remove="Image\home.png" />
-    <None Remove="Image\user.png" />
-    <None Remove="Image\watchlist.png" />
+    <None Remove="Images\add.png" />
+    <None Remove="Images\back-arrow.png" />
+    <None Remove="Images\calendar.png" />
+    <None Remove="Images\cancel.png" />
+    <None Remove="Images\edit.png" />
+    <None Remove="Images\home.png" />
+    <None Remove="Images\save.png" />
+    <None Remove="Images\user.png" />
+    <None Remove="Images\watchlist.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,16 +25,31 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Image\add.png">
+    <Resource Include="Images\add.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Image\home.png">
+    <Resource Include="Images\back-arrow.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Image\user.png">
+    <Resource Include="Images\calendar.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Image\watchlist.png">
+    <Resource Include="Images\cancel.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\edit.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\home.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\save.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\user.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\watchlist.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

@@ -1,4 +1,6 @@
 ﻿using Chronocinema.Models;
+using Chronocinema.Services;
+using Chronocinema.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -12,25 +14,28 @@ namespace Chronocinema.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
-
+        private object _currentView;
         private ObservableCollection<MediaItem> _mediaItems;
-        private MediaItem _selectedMediaItem;
-        private string _searchQuery;
-        private MediaItem _searchResult;
-        private bool _isSearchVisible;
-        private bool _isEditVisible;
 
         public MainViewModel()
         {
+            CurrentView = new MainScreen();
             MediaItems = new ObservableCollection<MediaItem>();
-            SearchCommand = new RelayCommand(ExecuteSearch, CanExecuteSearch);
-            AddMediaItemCommand = new RelayCommand(ExecuteAddMediaItem, CanExecuteAddMedia);
-            EditMediaItemCommand = new RelayCommand(ExecuteEditMediaItem, CanExecuteEditMedia);
-            DeleteMediaItemCommand = new RelayCommand(ExecuteDeleteMediaItem, CanExecuteDeleteMedia);
-            SaveMediaItemCommand = new RelayCommand(ExecuteSaveMediaItem);
-            CancelEditCommand = new RelayCommand(ExecuteCancelEdit);
-            ShowSearchCommand = new RelayCommand(ExecuteShowSearch);
-            CancelSearchCommand = new RelayCommand(ExecuteCancelSearch);
+            LoadSampleData();
+
+            NavigationService.Instance.ViewChanged += OnViewChanged;
+
+            NavigateToDetailCommand = new RelayCommand<MediaItem>(ExecuteNavigateToDetail);
+            NavigateToEditCommand = new RelayCommand<MediaItem>(ExecuteNavigateToEdit);
+            NavigateToHomeCommand = new RelayCommand(ExecuteNavigateToHome);
+            ShowAddMediaCommand = new RelayCommand(ExecuteShowAddMedia);
+            NavigateToWatchlistCommand = new RelayCommand(ExecuteNavigateToWatchlist);
+        }
+
+        public object CurrentView
+        {
+            get => _currentView;
+            set => SetProperty(ref _currentView, value);
         }
 
         public ObservableCollection<MediaItem> MediaItems
@@ -39,118 +44,240 @@ namespace Chronocinema.ViewModels
             set => SetProperty(ref _mediaItems, value);
         }
 
-        public MediaItem SelectedMediaItem
+        public ICommand NavigateToDetailCommand { get; }
+        public ICommand NavigateToEditCommand { get; }
+        public ICommand NavigateToHomeCommand { get; }
+        public ICommand ShowAddMediaCommand { get; }
+        public ICommand NavigateToWatchlistCommand { get; }
+
+        private void ExecuteNavigateToDetail(MediaItem mediaItem)
         {
-            get => _selectedMediaItem;
-            set => SetProperty(ref _selectedMediaItem, value);
+            var detailViewModel = new DetailViewModel(mediaItem);
+            LocatorViewModel.Instance.DetailViewModel = detailViewModel;
+            NavigationService.Instance.NavigateTo(new DetailScreen { DataContext = detailViewModel});
         }
 
-        public string SearchQuery
+        private void ExecuteNavigateToEdit(MediaItem mediaItem)
         {
-            get => _searchQuery;
-            set => SetProperty(ref _searchQuery, value);
+            var editViewModel = new EditViewModel(mediaItem);
+            LocatorViewModel.Instance.EditViewModel = editViewModel;
+            NavigationService.Instance.NavigateTo(new EditMediaScreen { DataContext = editViewModel });
         }
 
-        public MediaItem SearchResult
+        private void ExecuteNavigateToHome()
         {
-            get => _searchResult;
-            set => SetProperty(ref _searchResult, value);
+            NavigationService.Instance.NavigateTo(new MainScreen());
         }
 
-        public bool IsSearchVisible
+        private void ExecuteShowAddMedia()
         {
-            get => _isSearchVisible;
-            set => SetProperty(ref _isSearchVisible, value);
+            // TODO
         }
 
-        public bool IsEditVisible
+        private void ExecuteNavigateToWatchlist()
         {
-            get => _isEditVisible;
-            set => SetProperty(ref _isEditVisible, value);
+            // TODO
         }
 
-        public ICommand SearchCommand { get; }
-        public ICommand AddMediaItemCommand { get; }
-        public ICommand EditMediaItemCommand { get; }
-        public ICommand DeleteMediaItemCommand { get; }
-        public ICommand SaveMediaItemCommand { get; }
-        public ICommand CancelEditCommand { get; }
-        public ICommand ShowSearchCommand { get; }
-        public ICommand CancelSearchCommand { get; }
-
-        public ICommand NavigateHomeCommand { get; set; }
-        public ICommand ShowAddMediaCommand { get; set; }
-        public ICommand NavigateWatchlistCommand { get; set; }
-
-
-        private bool CanExecuteSearch(object parameter) => !string.IsNullOrWhiteSpace(SearchQuery);
-        private bool CanExecuteAddMedia(object parameter) => SearchResult != null;
-        private bool CanExecuteEditMedia(object parameter) => SelectedMediaItem != null;
-        private bool CanExecuteDeleteMedia(object parameter) => SelectedMediaItem != null;
-        private async void ExecuteSearch()
+        private void OnViewChanged(object view)
         {
-            try
+            CurrentView = view;
+        }
+
+        private void LoadSampleData()
+        {
+            MediaItems.Add(new MediaItem
             {
-                var result = await OmdbApiService.SearchMedia(SearchQuery);
-                if (result != null)
-                {
-                    SearchResult = result;
-                }
-                else
-                {
-                    MessageBox.Show("No results found.", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
-                }
-            }
-            catch (Exception ex)
+                Id = 1,
+                Title = "Alien: Romulus",
+                Type = MediaType.Movie,
+                Status = WatchingStatus.Completed,
+                Rating = 9.5,
+                Notes = "A thrilling addition to the Alien franchise.",
+                StartDate = new DateTime(2024, 10, 1),
+                EndDate = new DateTime(2024, 10, 1),
+                PosterUrl = "https://m.media-amazon.com/images/M/MV5BMDU0NjcwOGQtNjNjOS00NzQ3LWIwM2YtYWVmODZjMzQzN2ExXkEyXkFqcGc@._V1_SX300.jpg",
+                Year = "2024",
+                Genre = "Horror, Sci-Fi, Thriller",
+                Country = "United Kingdom, United States, Hungary, Australia, New Zealand, Canada",
+                Language = "English"
+            });
+            MediaItems.Add(new MediaItem
             {
-                MessageBox.Show($"An error occurred while searching: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-        }
-        private void ExecuteAddMediaItem()
-        {
-            if (SearchResult != null)
+                Id = 2,
+                Title = "Zootopia",
+                Type = MediaType.Movie,
+                Status = WatchingStatus.Watching,
+                Rating = 10,
+                Notes = "Judy is the best",
+                StartDate = new DateTime(2024, 10, 1),
+                EndDate = null,
+                PosterUrl = "https://m.media-amazon.com/images/M/MV5BOTMyMjEyNzIzMV5BMl5BanBnXkFtZTgwNzIyNjU0NzE@._V1_SX300.jpg",
+                Year = "2016",
+                Genre = "Animation, Action, Adventure",
+                Country = "United States",
+                Language = "English"
+            });
+            MediaItems.Add(new MediaItem
             {
-                SearchResult.Id = MediaItems.Count + 1;
-                MediaItems.Add(SearchResult);
-                ExecuteCancelSearch();
-                MessageBox.Show("Media item added successfully.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-            }
-        }
-        private void ExecuteEditMediaItem()
-        {
-            if (SelectedMediaItem != null)
+                Id = 3,
+                Title = "WALL E",
+                Type = MediaType.Movie,
+                Status = WatchingStatus.Completed,
+                Rating = 8,
+                Notes = "My childhood movie. Loving it fovever.",
+                StartDate = new DateTime(2019, 6, 5),
+                EndDate = new DateTime(2019, 6, 5),
+                PosterUrl = "https://m.media-amazon.com/images/M/MV5BMjExMTg5OTU0NF5BMl5BanBnXkFtZTcwMjMxMzMzMw@@._V1_SX300.jpg",
+                Year = "2008",
+                Genre = "Animation, Adventure, Family",
+                Country = "United States, Japan",
+                Language = "English"
+            });
+            MediaItems.Add(new MediaItem
             {
-                IsEditVisible = true;
-            }
-        }
-        private void ExecuteDeleteMediaItem()
-        {
-            if (SelectedMediaItem != null && MessageBox.Show("Do you really want to delete this media?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+                Id = 4,
+                Title = "Game of Thrones",
+                Type = MediaType.Series,
+                Status = WatchingStatus.Paused,
+                Rating = 4.5,
+                Notes = "Not bad, but not good.",
+                StartDate = new DateTime(2019, 6, 5),
+                EndDate = new DateTime(2020, 10, 12),
+                PosterUrl = "https://m.media-amazon.com/images/M/MV5BMTNhMDJmNmYtNDQ5OS00ODdlLWE0ZDAtZTgyYTIwNDY3OTU3XkEyXkFqcGc@._V1_SX300.jpg",
+                Year = "2011–2019",
+                Genre = "Action, Adventure, Drama",
+                Country = "United States, United Kingdom",
+                Language = "English"
+            });
+            MediaItems.Add(new MediaItem
             {
-                MediaItems.Remove(SelectedMediaItem);
-                MessageBox.Show("Media item deleted successfully.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-            }
-        }
-        private void ExecuteSaveMediaItem()
-        {
-            IsEditVisible = false;
-            MessageBox.Show("Media item updated successfully.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-        }
-        private void ExecuteCancelEdit()
-        {
-            IsEditVisible = false;
-        }
-        private void ExecuteShowSearch()
-        {
-            IsSearchVisible = true;
-            SearchQuery = string.Empty;
-            SearchResult = null;
-        }
-        private void ExecuteCancelSearch()
-        {
-            IsSearchVisible = false;
-            SearchQuery = string.Empty;
-            SearchResult = null;
+                Id = 5,
+                Title = "The Conjuring: Last Rites",
+                Type = MediaType.Movie,
+                Status = WatchingStatus.Completed,
+                Rating = 6.5,
+                Notes = "Really funny to watch with male friend in the cinema, but it was not scary.",
+                StartDate = new DateTime(2025, 10, 22),
+                EndDate = new DateTime(2025, 10, 22),
+                PosterUrl = "https://m.media-amazon.com/images/M/MV5BM2VmMzRkYzgtMzg2ZC00OTFkLTkwMTYtNTMxNjM2YzI1MjgyXkEyXkFqcGc@._V1_SX300.jpg",
+                Year = "2025",
+                Genre = "Horror, Mystery, Thriller",
+                Country = "United States, United Kingdom, Canada",
+                Language = "English"
+            });
+            MediaItems.Add(new MediaItem
+            {
+                Id = 6,
+                Title = "Breaking Bad",
+                Type = MediaType.Series,
+                Status = WatchingStatus.Dropped,
+                Rating = 3,
+                Notes = "No comment.",
+                StartDate = new DateTime(2016, 7, 12),
+                EndDate = new DateTime(2017, 9, 10),
+                PosterUrl = "https://m.media-amazon.com/images/M/MV5BMzU5ZGYzNmQtMTdhYy00OGRiLTg0NmQtYjVjNzliZTg1ZGE4XkEyXkFqcGc@._V1_SX300.jpg",
+                Year = "2008–2013",
+                Genre = "Crime, Drama, Thriller",
+                Country = "United States",
+                Language = "English, Spanish"
+            });
+            MediaItems.Add(new MediaItem
+            {
+                Id = 7,
+                Title = "Alien: Romulus",
+                Type = MediaType.Movie,
+                Status = WatchingStatus.Completed,
+                Rating = 9.5,
+                Notes = "A thrilling addition to the Alien franchise.",
+                StartDate = new DateTime(2024, 10, 1),
+                EndDate = new DateTime(2024, 10, 1),
+                PosterUrl = "https://m.media-amazon.com/images/M/MV5BMDU0NjcwOGQtNjNjOS00NzQ3LWIwM2YtYWVmODZjMzQzN2ExXkEyXkFqcGc@._V1_SX300.jpg",
+                Year = "2024",
+                Genre = "Horror, Sci-Fi, Thriller",
+                Country = "United Kingdom, United States, Hungary, Australia, New Zealand, Canada",
+                Language = "English"
+            });
+            MediaItems.Add(new MediaItem
+            {
+                Id = 8,
+                Title = "Zootopia",
+                Type = MediaType.Movie,
+                Status = WatchingStatus.Watching,
+                Rating = 10,
+                Notes = "Judy is the best",
+                StartDate = new DateTime(2024, 10, 1),
+                EndDate = null,
+                PosterUrl = "https://m.media-amazon.com/images/M/MV5BOTMyMjEyNzIzMV5BMl5BanBnXkFtZTgwNzIyNjU0NzE@._V1_SX300.jpg",
+                Year = "2016",
+                Genre = "Animation, Action, Adventure",
+                Country = "United States",
+                Language = "English"
+            });
+            MediaItems.Add(new MediaItem
+            {
+                Id = 9,
+                Title = "WALL E",
+                Type = MediaType.Movie,
+                Status = WatchingStatus.Completed,
+                Rating = 8,
+                Notes = "My childhood movie. Loving it fovever.",
+                StartDate = new DateTime(2019, 6, 5),
+                EndDate = new DateTime(2019, 6, 5),
+                PosterUrl = "https://m.media-amazon.com/images/M/MV5BMjExMTg5OTU0NF5BMl5BanBnXkFtZTcwMjMxMzMzMw@@._V1_SX300.jpg",
+                Year = "2008",
+                Genre = "Animation, Adventure, Family",
+                Country = "United States, Japan",
+                Language = "English"
+            });
+            MediaItems.Add(new MediaItem
+            {
+                Id = 10,
+                Title = "Game of Thrones",
+                Type = MediaType.Series,
+                Status = WatchingStatus.Paused,
+                Rating = 4.5,
+                Notes = "Not bad, but not good.",
+                StartDate = new DateTime(2019, 6, 5),
+                EndDate = new DateTime(2020, 10, 12),
+                PosterUrl = "https://m.media-amazon.com/images/M/MV5BMTNhMDJmNmYtNDQ5OS00ODdlLWE0ZDAtZTgyYTIwNDY3OTU3XkEyXkFqcGc@._V1_SX300.jpg",
+                Year = "2011–2019",
+                Genre = "Action, Adventure, Drama",
+                Country = "United States, United Kingdom",
+                Language = "English"
+            });
+            MediaItems.Add(new MediaItem
+            {
+                Id = 11,
+                Title = "The Conjuring: Last Rites",
+                Type = MediaType.Movie,
+                Status = WatchingStatus.Completed,
+                Rating = 6.5,
+                Notes = "Really funny to watch with male friend in the cinema, but it was not scary.",
+                StartDate = new DateTime(2025, 10, 22),
+                EndDate = new DateTime(2025, 10, 22),
+                PosterUrl = "https://m.media-amazon.com/images/M/MV5BM2VmMzRkYzgtMzg2ZC00OTFkLTkwMTYtNTMxNjM2YzI1MjgyXkEyXkFqcGc@._V1_SX300.jpg",
+                Year = "2025",
+                Genre = "Horror, Mystery, Thriller",
+                Country = "United States, United Kingdom, Canada",
+                Language = "English"
+            });
+            MediaItems.Add(new MediaItem
+            {
+                Id = 12,
+                Title = "Breaking Bad",
+                Type = MediaType.Series,
+                Status = WatchingStatus.Dropped,
+                Rating = 3,
+                Notes = "No comment.",
+                StartDate = new DateTime(2016, 7, 12),
+                EndDate = new DateTime(2017, 9, 10),
+                PosterUrl = "https://m.media-amazon.com/images/M/MV5BMzU5ZGYzNmQtMTdhYy00OGRiLTg0NmQtYjVjNzliZTg1ZGE4XkEyXkFqcGc@._V1_SX300.jpg",
+                Year = "2008–2013",
+                Genre = "Crime, Drama, Thriller",
+                Country = "United States",
+                Language = "English, Spanish"
+            });
         }
     }
 }

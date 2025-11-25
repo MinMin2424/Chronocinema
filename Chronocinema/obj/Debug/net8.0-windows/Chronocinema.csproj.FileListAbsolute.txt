@@ -1,8 +1,4 @@
 C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\Chronocinema.csproj.AssemblyReference.cache
-C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\Style\Brushes.baml
-C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\Style\Colors.baml
-C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\Style\ComponentStyles.baml
-C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\Style\Typography.baml
 C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\Chronocinema_MarkupCompile.cache
@@ -27,3 +23,18 @@ C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debu
 C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\Chronocinema.pdb
 C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\Chronocinema.genruntimeconfig.cache
 C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\ref\Chronocinema.dll
+C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\Styles\Brushes.baml
+C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\Styles\Colors.baml
+C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\Styles\ComponentStyles.baml
+C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\Styles\Typography.baml
+C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\Windows\DetailWindow.g.cs
+C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\Windows\EditMediaWindow.g.cs
+C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\Windows\DetailWindow.baml
+C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\Windows\EditMediaWindow.baml
+C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\Views\DetailScreen.g.cs
+C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\Views\EditMediaScreen.g.cs
+C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\Views\MainScreen.g.cs
+C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\Views\DetailScreen.baml
+C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\Views\EditMediaScreen.baml
+C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\Views\MainScreen.baml

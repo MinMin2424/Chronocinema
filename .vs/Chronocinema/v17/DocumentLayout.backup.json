@@ -3,8 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|c:\\users\\minat\\onedrive\\fel_cvut\\5semestr\\iur\\chronocinema\\chronocinema\\style\\componentstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|solutionrelative:chronocinema\\style\\componentstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|c:\\users\\minat\\onedrive\\fel_cvut\\5semestr\\iur\\chronocinema\\chronocinema\\styles\\componentstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|solutionrelative:chronocinema\\styles\\componentstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|c:\\users\\minat\\onedrive\\fel_cvut\\5semestr\\iur\\chronocinema\\chronocinema\\views\\detailscreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|solutionrelative:chronocinema\\views\\detailscreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|c:\\users\\minat\\onedrive\\fel_cvut\\5semestr\\iur\\chronocinema\\chronocinema\\viewmodels\\editviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|solutionrelative:chronocinema\\viewmodels\\editviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|c:\\users\\minat\\onedrive\\fel_cvut\\5semestr\\iur\\chronocinema\\chronocinema\\views\\editmediascreen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|solutionrelative:chronocinema\\views\\editmediascreen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|c:\\users\\minat\\onedrive\\fel_cvut\\5semestr\\iur\\chronocinema\\chronocinema\\services\\navigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|solutionrelative:chronocinema\\services\\navigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|c:\\users\\minat\\onedrive\\fel_cvut\\5semestr\\iur\\chronocinema\\chronocinema\\styles\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|solutionrelative:chronocinema\\styles\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|c:\\users\\minat\\onedrive\\fel_cvut\\5semestr\\iur\\chronocinema\\chronocinema\\viewmodels\\detailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|solutionrelative:chronocinema\\viewmodels\\detailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|c:\\users\\minat\\onedrive\\fel_cvut\\5semestr\\iur\\chronocinema\\chronocinema\\viewmodels\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|solutionrelative:chronocinema\\viewmodels\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|c:\\users\\minat\\onedrive\\fel_cvut\\5semestr\\iur\\chronocinema\\chronocinema\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -15,40 +43,32 @@
       "RelativeMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|solutionrelative:chronocinema\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|c:\\users\\minat\\onedrive\\fel_cvut\\5semestr\\iur\\chronocinema\\chronocinema\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|solutionrelative:chronocinema\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|c:\\users\\minat\\onedrive\\fel_cvut\\5semestr\\iur\\chronocinema\\chronocinema\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|solutionrelative:chronocinema\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|c:\\users\\minat\\onedrive\\fel_cvut\\5semestr\\iur\\chronocinema\\chronocinema\\viewmodels\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|solutionrelative:chronocinema\\viewmodels\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|c:\\users\\minat\\onedrive\\fel_cvut\\5semestr\\iur\\chronocinema\\chronocinema\\viewmodels\\locatorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|solutionrelative:chronocinema\\viewmodels\\locatorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|c:\\users\\minat\\onedrive\\fel_cvut\\5semestr\\iur\\chronocinema\\chronocinema\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|solutionrelative:chronocinema\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|c:\\users\\minat\\onedrive\\fel_cvut\\5semestr\\iur\\chronocinema\\chronocinema\\omdbapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|solutionrelative:chronocinema\\omdbapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|c:\\users\\minat\\onedrive\\fel_cvut\\5semestr\\iur\\chronocinema\\chronocinema\\services\\omdbapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|solutionrelative:chronocinema\\services\\omdbapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|c:\\users\\minat\\onedrive\\fel_cvut\\5semestr\\iur\\chronocinema\\chronocinema\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|solutionrelative:chronocinema\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|c:\\users\\minat\\onedrive\\fel_cvut\\5semestr\\iur\\chronocinema\\chronocinema\\models\\mediaitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|solutionrelative:chronocinema\\models\\mediaitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|c:\\users\\minat\\onedrive\\fel_cvut\\5semestr\\iur\\chronocinema\\chronocinema\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|solutionrelative:chronocinema\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|c:\\users\\minat\\onedrive\\fel_cvut\\5semestr\\iur\\chronocinema\\chronocinema\\styles\\typography.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|solutionrelative:chronocinema\\styles\\typography.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|c:\\users\\minat\\onedrive\\fel_cvut\\5semestr\\iur\\chronocinema\\chronocinema\\style\\typography.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|solutionrelative:chronocinema\\style\\typography.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|c:\\users\\minat\\onedrive\\fel_cvut\\5semestr\\iur\\chronocinema\\chronocinema\\style\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|solutionrelative:chronocinema\\style\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|c:\\users\\minat\\onedrive\\fel_cvut\\5semestr\\iur\\chronocinema\\chronocinema\\style\\brushes.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|solutionrelative:chronocinema\\style\\brushes.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|c:\\users\\minat\\onedrive\\fel_cvut\\5semestr\\iur\\chronocinema\\chronocinema\\windows\\editmediawindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{71A92748-FECC-454C-A35E-3A059DC8ECA1}|Chronocinema\\Chronocinema.csproj|solutionrelative:chronocinema\\windows\\editmediawindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,159 +78,220 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "Chronocinema\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\MainWindow.xaml",
-              "RelativeToolTip": "Chronocinema\\MainWindow.xaml",
+              "Title": "DetailScreen.xaml",
+              "DocumentMoniker": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Views\\DetailScreen.xaml",
+              "RelativeDocumentMoniker": "Chronocinema\\Views\\DetailScreen.xaml",
+              "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Views\\DetailScreen.xaml",
+              "RelativeToolTip": "Chronocinema\\Views\\DetailScreen.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-23T14:48:14.56Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Chronocinema\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\MainWindow.xaml.cs",
-              "RelativeToolTip": "Chronocinema\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAN0AAAAAAAAAAAAqwPAAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T18:12:35.53Z",
-              "IsPinned": true,
+              "WhenOpened": "2025-11-25T15:52:17.308Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ComponentStyles.xaml",
-              "DocumentMoniker": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Style\\ComponentStyles.xaml",
-              "RelativeDocumentMoniker": "Chronocinema\\Style\\ComponentStyles.xaml",
-              "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Style\\ComponentStyles.xaml*",
-              "RelativeToolTip": "Chronocinema\\Style\\ComponentStyles.xaml*",
+              "DocumentMoniker": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Styles\\ComponentStyles.xaml",
+              "RelativeDocumentMoniker": "Chronocinema\\Styles\\ComponentStyles.xaml",
+              "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Styles\\ComponentStyles.xaml*",
+              "RelativeToolTip": "Chronocinema\\Styles\\ComponentStyles.xaml*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-24T17:51:01.336Z",
-              "IsPinned": true,
+              "WhenOpened": "2025-11-24T20:01:50.661Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BaseViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\ViewModels\\BaseViewModel.cs",
-              "RelativeDocumentMoniker": "Chronocinema\\ViewModels\\BaseViewModel.cs",
-              "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\ViewModels\\BaseViewModel.cs",
-              "RelativeToolTip": "Chronocinema\\ViewModels\\BaseViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "EditViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\ViewModels\\EditViewModel.cs",
+              "RelativeDocumentMoniker": "Chronocinema\\ViewModels\\EditViewModel.cs",
+              "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\ViewModels\\EditViewModel.cs",
+              "RelativeToolTip": "Chronocinema\\ViewModels\\EditViewModel.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAgwFQAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T17:40:45.036Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "OmdbApiService.cs",
-              "DocumentMoniker": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\OmdbApiService.cs",
-              "RelativeDocumentMoniker": "Chronocinema\\OmdbApiService.cs",
-              "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\OmdbApiService.cs",
-              "RelativeToolTip": "Chronocinema\\OmdbApiService.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAcwCAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T17:41:28.458Z",
+              "WhenOpened": "2025-11-25T11:21:30.292Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "MainViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\ViewModels\\MainViewModel.cs",
-              "RelativeDocumentMoniker": "Chronocinema\\ViewModels\\MainViewModel.cs",
-              "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\ViewModels\\MainViewModel.cs",
-              "RelativeToolTip": "Chronocinema\\ViewModels\\MainViewModel.cs",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAIwI8AAAAJAAAAAAAAAA==",
+              "Title": "EditMediaScreen.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Views\\EditMediaScreen.xaml.cs",
+              "RelativeDocumentMoniker": "Chronocinema\\Views\\EditMediaScreen.xaml.cs",
+              "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Views\\EditMediaScreen.xaml.cs",
+              "RelativeToolTip": "Chronocinema\\Views\\EditMediaScreen.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T17:40:51.574Z",
+              "WhenOpened": "2025-11-25T15:29:28.792Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "RelayCommand.cs",
-              "DocumentMoniker": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\ViewModels\\RelayCommand.cs",
-              "RelativeDocumentMoniker": "Chronocinema\\ViewModels\\RelayCommand.cs",
-              "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\ViewModels\\RelayCommand.cs",
-              "RelativeToolTip": "Chronocinema\\ViewModels\\RelayCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABBAAAAAAAAAA==",
+              "Title": "NavigationService.cs",
+              "DocumentMoniker": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Services\\NavigationService.cs",
+              "RelativeDocumentMoniker": "Chronocinema\\Services\\NavigationService.cs",
+              "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Services\\NavigationService.cs",
+              "RelativeToolTip": "Chronocinema\\Services\\NavigationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T17:41:00.732Z",
+              "WhenOpened": "2025-11-25T11:21:58.544Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AssemblyInfo.cs",
-              "DocumentMoniker": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\AssemblyInfo.cs",
-              "RelativeDocumentMoniker": "Chronocinema\\AssemblyInfo.cs",
-              "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\AssemblyInfo.cs",
-              "RelativeToolTip": "Chronocinema\\AssemblyInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T17:51:11.201Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\App.xaml",
               "RelativeDocumentMoniker": "Chronocinema\\App.xaml",
               "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\App.xaml",
               "RelativeToolTip": "Chronocinema\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-24T17:41:07.676Z",
+              "WhenOpened": "2025-11-25T12:02:48.35Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "Typography.xaml",
-              "DocumentMoniker": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Style\\Typography.xaml",
-              "RelativeDocumentMoniker": "Chronocinema\\Style\\Typography.xaml",
-              "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Style\\Typography.xaml",
-              "RelativeToolTip": "Chronocinema\\Style\\Typography.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-24T17:51:02.611Z",
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Chronocinema\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Chronocinema\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAUwB4AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T11:30:47.76Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 6,
+              "Title": "DetailViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\ViewModels\\DetailViewModel.cs",
+              "RelativeDocumentMoniker": "Chronocinema\\ViewModels\\DetailViewModel.cs",
+              "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\ViewModels\\DetailViewModel.cs",
+              "RelativeToolTip": "Chronocinema\\ViewModels\\DetailViewModel.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAYwDsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T11:21:27.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Colors.xaml",
-              "DocumentMoniker": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Style\\Colors.xaml",
-              "RelativeDocumentMoniker": "Chronocinema\\Style\\Colors.xaml",
-              "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Style\\Colors.xaml",
-              "RelativeToolTip": "Chronocinema\\Style\\Colors.xaml",
+              "DocumentMoniker": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Styles\\Colors.xaml",
+              "RelativeDocumentMoniker": "Chronocinema\\Styles\\Colors.xaml",
+              "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Styles\\Colors.xaml",
+              "RelativeToolTip": "Chronocinema\\Styles\\Colors.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-24T17:51:00.061Z",
+              "WhenOpened": "2025-11-25T13:57:04.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Chronocinema\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\MainWindow.xaml",
+              "RelativeToolTip": "Chronocinema\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-25T10:41:27.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\ViewModels\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "Chronocinema\\ViewModels\\RelayCommand.cs",
+              "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\ViewModels\\RelayCommand.cs",
+              "RelativeToolTip": "Chronocinema\\ViewModels\\RelayCommand.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAqwCoAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T11:21:35.308Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "Brushes.xaml",
-              "DocumentMoniker": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Style\\Brushes.xaml",
-              "RelativeDocumentMoniker": "Chronocinema\\Style\\Brushes.xaml",
-              "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Style\\Brushes.xaml",
-              "RelativeToolTip": "Chronocinema\\Style\\Brushes.xaml",
+              "Title": "LocatorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\ViewModels\\LocatorViewModel.cs",
+              "RelativeDocumentMoniker": "Chronocinema\\ViewModels\\LocatorViewModel.cs",
+              "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\ViewModels\\LocatorViewModel.cs",
+              "RelativeToolTip": "Chronocinema\\ViewModels\\LocatorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T11:24:11.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BaseViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\ViewModels\\BaseViewModel.cs",
+              "RelativeDocumentMoniker": "Chronocinema\\ViewModels\\BaseViewModel.cs",
+              "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\ViewModels\\BaseViewModel.cs",
+              "RelativeToolTip": "Chronocinema\\ViewModels\\BaseViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T11:21:24.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "OmdbApiService.cs",
+              "DocumentMoniker": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Services\\OmdbApiService.cs",
+              "RelativeDocumentMoniker": "Chronocinema\\Services\\OmdbApiService.cs",
+              "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Services\\OmdbApiService.cs",
+              "RelativeToolTip": "Chronocinema\\Services\\OmdbApiService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAA6wC8AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T11:21:12.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MediaItem.cs",
+              "DocumentMoniker": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Models\\MediaItem.cs",
+              "RelativeDocumentMoniker": "Chronocinema\\Models\\MediaItem.cs",
+              "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Models\\MediaItem.cs",
+              "RelativeToolTip": "Chronocinema\\Models\\MediaItem.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAIwGoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T11:21:20.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Typography.xaml",
+              "DocumentMoniker": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Styles\\Typography.xaml",
+              "RelativeDocumentMoniker": "Chronocinema\\Styles\\Typography.xaml",
+              "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Styles\\Typography.xaml",
+              "RelativeToolTip": "Chronocinema\\Styles\\Typography.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-24T17:50:57.576Z",
+              "WhenOpened": "2025-11-25T10:20:27.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "EditMediaWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Windows\\EditMediaWindow.xaml",
+              "RelativeDocumentMoniker": "Chronocinema\\Windows\\EditMediaWindow.xaml",
+              "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Windows\\EditMediaWindow.xaml",
+              "RelativeToolTip": "Chronocinema\\Windows\\EditMediaWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-25T11:33:35.187Z",
               "EditorCaption": ""
             }
           ]

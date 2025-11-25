@@ -4,115 +4,24 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Chronocinema"
+        xmlns:views="clr-namespace:Chronocinema.Views"
         mc:Ignorable="d"
-        Style="{StaticResource MainWindowStyle}">
+        Title="Chronocinema"
+        Style="{StaticResource WindowStyle}">
 
     <Grid>
-        <Grid.RowDefinitions>
-            <!-- Top App Bar -->
-            <RowDefinition Height="Auto"/>
-            <!-- Main Content -->
-            <RowDefinition Height="*"/>
-            <!-- Bottom App Bar -->
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-
-        <!-- Top App Bar -->
-        <Border Grid.Row="0" Style="{StaticResource TopAppBarStyle}">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-                
-                <!-- App Title -->
-                <TextBlock Text="Chronocinema" Style="{StaticResource HeaderText}" VerticalAlignment="Center"/>
-                <!-- Action Buttons -->
-                <StackPanel Grid.Column="2" Orientation="Horizontal">
-                    <Button Style="{StaticResource IconButtonStyle}" Margin="20,10,0,10">
-                        <Image Source="/Image/user.png"/>
-                    </Button>
-                    <Button Style="{StaticResource IconButtonStyle}" Margin="20,10,0,10">
-                        <Image Source="/Image/add.png"/>
-                    </Button>
-                </StackPanel>
-            </Grid>
-        </Border>
-        
-        <!-- Main Content -->
-        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Hidden">
-            <ItemsControl ItemsSource="{Binding MediaItems}" Margin="8">
-                
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center"/>
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
-                
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <Border Style="{StaticResource MovieCardStyle}">
-                            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="4">
-                                
-                                <!-- Movie Poster -->
-                                <Border Style="{StaticResource MoviePosterBorderStyle}">
-                                    <Image Source="{Binding PosterUrl}" Style="{StaticResource MovieImageStyle}">
-                                        <Image.Clip>
-                                            <RectangleGeometry Rect="0,0,90,120" RadiusX="8" RadiusY="8"/>
-                                        </Image.Clip>
-                                    </Image>
-                                </Border>
-                                <!-- Movie Title -->
-                                <TextBlock Text="{Binding Title}" Style="{StaticResource MovieTitleText}"/>
-
-                            </StackPanel>
-                        </Border>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-                
-            </ItemsControl>
-        </ScrollViewer>
-        
-        <!-- Bottom App Bar -->
-        <Border Grid.Row="2" Style="{StaticResource BottomAppBarStyle}">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-
-                <!-- Home Nav Item -->
-                <StackPanel Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Border Style="{StaticResource NavItemSelectedContainerStyle}">
-                        <Button Style="{StaticResource IconButtonStyle}" Command="{Binding NavigateHomeCommand}">
-                            <Image Source="/Image/home.png"/>
-                        </Button>
-                    </Border>
-                    <TextBlock Text="Home" Style="{StaticResource NavItemText}" Margin="0,2,0,0"/>
-                </StackPanel>
-
-                <!-- Add Nav Item -->
-                <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Border Style="{StaticResource NavItemContainerStyle}">
-                        <Button Style="{StaticResource IconButtonStyle}" Command="{Binding ShowAddMediaCommand}">
-                            <Image Source="/Image/add.png"/>
-                        </Button>
-                    </Border>
-                    <TextBlock Text="Add" Style="{StaticResource NavItemText}" Margin="0,2,0,0"/>
-                </StackPanel>
-
-                <!-- Watchlist Nav Item -->
-                <StackPanel Grid.Column="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Border Style="{StaticResource NavItemContainerStyle}">
-                        <Button Style="{StaticResource IconButtonStyle}" Command="{Binding NavigateWatchlistCommand}">
-                            <Image Source="/Image/watchlist.png"/>
-                        </Button>
-                    </Border>
-                    <TextBlock Text="Watchlist" Style="{StaticResource NavItemText}" Margin="0,2,0,0"/>
-                </StackPanel>
-            </Grid>
-        </Border>
+        <ContentControl Content="{Binding CurrentView}">
+            <ContentControl.Resources>
+                <DataTemplate DataType="{x:Type views:MainScreen}">
+                    <views:MainScreen DataContext="{Binding}"/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type views:DetailScreen}">
+                    <views:DetailScreen DataContext="{Binding}"/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type views:EditMediaScreen}">
+                    <views:EditMediaScreen DataContext="{Binding}"/>
+                </DataTemplate>
+            </ContentControl.Resources>
+        </ContentControl>
     </Grid>
 </Window>
