@@ -52,7 +52,11 @@
 
                 <!-- Poster -->
                 <Border Style="{StaticResource MoviePosterBorderStyle}" Width="120" Height="160" HorizontalAlignment="Center">
-                    <Image Source="{Binding MediaItem.PosterUrl}" Stretch="UniformToFill"/>
+                    <Image Source="{Binding MediaItem.PosterUrl}" Stretch="UniformToFill">
+                        <Image.Clip>
+                            <RectangleGeometry Rect="0,0,120,160" RadiusX="6" RadiusY="6"/>
+                        </Image.Clip>
+                    </Image>
                 </Border>
 
                 <!-- Movie Title (read-only) -->

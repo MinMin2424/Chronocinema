@@ -38,3 +38,5 @@ C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debu
 C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\Views\DetailScreen.baml
 C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\Views\EditMediaScreen.baml
 C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\Views\MainScreen.baml
+C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\Views\WatchlistScreen.g.cs
+C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\obj\Debug\net8.0-windows\Views\WatchlistScreen.baml

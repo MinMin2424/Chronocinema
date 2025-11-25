@@ -37,16 +37,17 @@
 
                 <!-- Movie Title -->
                 <TextBlock Grid.Column="1" Text="{Binding MediaItem.Title}" 
-                       Style="{StaticResource HeaderText}" 
-                       VerticalAlignment="Center" 
-                       TextTrimming="CharacterEllipsis" 
-                       Margin="10,0"/>
+                           Style="{StaticResource HeaderText}" 
+                           VerticalAlignment="Center" 
+                           TextTrimming="CharacterEllipsis" 
+                           Margin="10,0"/>
 
                 <!-- Edit Button -->
                 <Button Grid.Column="2"
-                    Style="{StaticResource IconButtonStyle}"
-                    Command="{Binding EditMediaCommand}"
-                    Margin="10,0">
+                        Style="{StaticResource IconButtonStyle}"
+                        Command="{Binding EditMediaCommand}"
+                        Margin="10,0"
+                        Width="20" Height="20">
                     <Image Source="/Chronocinema;component/Images/edit.png"/>
                 </Button>
             </Grid>

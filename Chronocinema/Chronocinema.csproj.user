@@ -11,6 +11,9 @@
     <Compile Update="Views\MainScreen.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\WatchlistScreen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Windows\DetailWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

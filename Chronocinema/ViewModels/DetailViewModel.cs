@@ -64,7 +64,7 @@ namespace Chronocinema.ViewModels
 
         private void ExecuteNavigateToWatchlist()
         {
-            // TODO
+            NavigationService.Instance.NavigateTo(new WatchlistScreen());
         }
     }
 }

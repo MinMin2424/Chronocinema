@@ -76,7 +76,7 @@ namespace Chronocinema.ViewModels
 
         private void ExecuteNavigateToWatchlist()
         {
-            // TODO
+            NavigationService.Instance.NavigateTo(new WatchlistScreen());
         }
 
         private void OnViewChanged(object view)
@@ -203,7 +203,7 @@ namespace Chronocinema.ViewModels
                 Id = 8,
                 Title = "Zootopia",
                 Type = MediaType.Movie,
-                Status = WatchingStatus.Watching,
+                Status = WatchingStatus.Planning,
                 Rating = 10,
                 Notes = "Judy is the best",
                 StartDate = new DateTime(2024, 10, 1),
@@ -235,7 +235,7 @@ namespace Chronocinema.ViewModels
                 Id = 10,
                 Title = "Game of Thrones",
                 Type = MediaType.Series,
-                Status = WatchingStatus.Paused,
+                Status = WatchingStatus.Planning,
                 Rating = 4.5,
                 Notes = "Not bad, but not good.",
                 StartDate = new DateTime(2019, 6, 5),

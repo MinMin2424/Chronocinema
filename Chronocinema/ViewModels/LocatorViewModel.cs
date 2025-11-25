@@ -13,5 +13,8 @@ namespace Chronocinema.ViewModels
         public MainViewModel MainViewModel { get; } = new MainViewModel();
         public DetailViewModel DetailViewModel { get; set; }
         public EditViewModel EditViewModel { get; set; }
+        public WatchlistViewModel WatchlistViewModel { get; set; }
+
+        private LocatorViewModel() { }
     }
 }
