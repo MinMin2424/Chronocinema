@@ -225,7 +225,7 @@
                             Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
-                            CornerRadius="8"
+                            CornerRadius="6"
                             SnapsToDevicePixels="True">
                         <ContentPresenter x:Name="contentPresenter"
                                   ContentTemplate="{TemplateBinding Content}"
@@ -601,6 +601,15 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+    </Style>
+    
+    <!-- Add Screen Styles -->
+    <Style x:Key="ErrorMessageTextBlockStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{StaticResource LightPurpleBrush}"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0,10,0,0"/>
     </Style>
 
 </ResourceDictionary>

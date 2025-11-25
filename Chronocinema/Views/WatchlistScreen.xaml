@@ -52,7 +52,7 @@
                 <ItemsControl ItemsSource="{Binding WatchlistItems}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            <Border Style="{StaticResource WatchlistCardStyle}">
+                            <Border Style="{StaticResource WatchlistCardStyle}"  MouseLeftButtonDown="MovieCard_MouseLeftButtonDown">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="Auto"/>

@@ -68,7 +68,7 @@ namespace Chronocinema.ViewModels
 
         private void ExecuteShowAddMedia()
         {
-            // TODO
+            NavigationService.Instance.NavigateTo(new AddMediaScreen());
         }
 
         private void ExecuteNavigateToWatchlist()

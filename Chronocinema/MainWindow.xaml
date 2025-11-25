@@ -21,6 +21,12 @@
                 <DataTemplate DataType="{x:Type views:EditMediaScreen}">
                     <views:EditMediaScreen DataContext="{Binding}"/>
                 </DataTemplate>
+                <DataTemplate DataType="{x:Type views:WatchlistScreen}">
+                    <views:WatchlistScreen DataContext="{Binding}"/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type views:AddMediaScreen}">
+                    <views:AddMediaScreen DataContext="{Binding}"/>
+                </DataTemplate>
             </ContentControl.Resources>
         </ContentControl>
     </Grid>

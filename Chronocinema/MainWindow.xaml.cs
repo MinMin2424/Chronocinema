@@ -28,7 +28,7 @@ namespace Chronocinema
         {
             InitializeComponent();
             
-            ViewModel = new MainViewModel();
+            ViewModel = LocatorViewModel.Instance.MainViewModel;
             DataContext = ViewModel;
 
             WindowStartupLocation = WindowStartupLocation.CenterScreen;

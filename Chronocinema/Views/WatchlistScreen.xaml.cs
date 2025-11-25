@@ -45,5 +45,14 @@ namespace Chronocinema.Views
                 EmptyStateText.Visibility = Visibility.Collapsed;
             }
         }
+
+        private void MovieCard_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (sender is FrameworkElement element && element.DataContext is Models.MediaItem mediaItem)
+            {
+                var viewModel = DataContext as WatchlistViewModel;
+                viewModel?.NavigateToDetailCommand.Execute(mediaItem);
+            }
+        }
     }
 }

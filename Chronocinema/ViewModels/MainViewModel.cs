@@ -19,7 +19,9 @@ namespace Chronocinema.ViewModels
 
         public MainViewModel()
         {
-            CurrentView = new MainScreen();
+            var mainScreen = new MainScreen();
+            mainScreen.DataContext = this;
+            CurrentView = mainScreen;
             MediaItems = new ObservableCollection<MediaItem>();
             LoadSampleData();
 
@@ -44,6 +46,11 @@ namespace Chronocinema.ViewModels
             set => SetProperty(ref _mediaItems, value);
         }
 
+        public void RefreshMediaItems()
+        {
+            OnPropertyChanged(nameof(MediaItems));
+        }
+
         public ICommand NavigateToDetailCommand { get; }
         public ICommand NavigateToEditCommand { get; }
         public ICommand NavigateToHomeCommand { get; }
@@ -66,12 +73,14 @@ namespace Chronocinema.ViewModels
 
         private void ExecuteNavigateToHome()
         {
-            NavigationService.Instance.NavigateTo(new MainScreen());
+            var mainScreen = new MainScreen();
+            mainScreen.DataContext = this;
+            NavigationService.Instance.NavigateTo(mainScreen);
         }
 
         private void ExecuteShowAddMedia()
         {
-            // TODO
+            NavigationService.Instance.NavigateTo(new AddMediaScreen());
         }
 
         private void ExecuteNavigateToWatchlist()
