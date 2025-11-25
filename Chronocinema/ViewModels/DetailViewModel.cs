@@ -16,6 +16,7 @@ namespace Chronocinema.ViewModels
     {
 
         private MediaItem _mediaItem;
+        private bool _showDeleteDialog;
 
         public DetailViewModel(MediaItem mediaItem)
         {
@@ -23,6 +24,9 @@ namespace Chronocinema.ViewModels
 
             GoBackCommand = new RelayCommand(ExecuteGoBack);
             EditMediaCommand = new RelayCommand(ExecuteEditMedia);
+            DeleteMediaCommand = new RelayCommand(ExecuteDeleteMedia);
+            ConfirmDeleteCommand = new RelayCommand(ExecuteConfirmDelete);
+            CancelDeleteCommand = new RelayCommand(ExecuteCancelDelete);
             NavigateToHomeCommand = new RelayCommand(ExecuteNavigateToHome);
             ShowAddMediaCommand = new RelayCommand(ExecuteShowAddMedia);
             NavigateToWatchlistCommand = new RelayCommand(ExecuteNavigateToWatchlist);
@@ -34,8 +38,17 @@ namespace Chronocinema.ViewModels
             set => SetProperty(ref _mediaItem, value);
         }
 
+        public bool ShowDeleteDialog
+        {
+            get => _showDeleteDialog;
+            set => SetProperty(ref _showDeleteDialog, value);
+        }
+
         public ICommand GoBackCommand { get; }
         public ICommand EditMediaCommand { get; }
+        public ICommand DeleteMediaCommand { get; }
+        public ICommand ConfirmDeleteCommand { get; }
+        public ICommand CancelDeleteCommand { get; }
         public ICommand NavigateToHomeCommand { get; }
         public ICommand ShowAddMediaCommand { get; }
         public ICommand NavigateToWatchlistCommand { get; }
@@ -50,6 +63,28 @@ namespace Chronocinema.ViewModels
             var editViewModel = new EditViewModel(MediaItem);
             LocatorViewModel.Instance.EditViewModel = editViewModel;
             NavigationService.Instance.NavigateTo(new EditMediaScreen { DataContext = editViewModel });
+        }
+
+        private void ExecuteDeleteMedia()
+        {
+            ShowDeleteDialog = true;
+        }
+
+        private void ExecuteConfirmDelete()
+        {
+            var mainViewModel = LocatorViewModel.Instance.MainViewModel;
+            var itemToRemove = mainViewModel.MediaItems.FirstOrDefault(item => item.Id == MediaItem.Id);
+            if (itemToRemove != null)
+            {
+                mainViewModel.MediaItems.Remove(itemToRemove);
+            }
+            ShowDeleteDialog = false;
+            NavigationService.Instance.NavigateTo(new MainScreen());
+        }
+
+        private void ExecuteCancelDelete()
+        {
+            ShowDeleteDialog = false;
         }
 
         private void ExecuteNavigateToHome()

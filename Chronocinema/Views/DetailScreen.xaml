@@ -4,8 +4,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Chronocinema.Views"
+             xmlns:converters="clr-namespace:Chronocinema.Converters"
              mc:Ignorable="d" 
              d:Style="{StaticResource ScreenStyle}">
+
+    <UserControl.Resources>
+        <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    </UserControl.Resources>
 
     <Grid>
 
@@ -24,6 +29,7 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
 
@@ -49,6 +55,15 @@
                         Margin="10,0"
                         Width="20" Height="20">
                     <Image Source="/Chronocinema;component/Images/edit.png"/>
+                </Button>
+
+                <!-- Delete Button -->
+                <Button Grid.Column="3"
+                        Style="{StaticResource IconButtonStyle}"
+                        Command="{Binding DeleteMediaCommand}"
+                        Margin="10,0"
+                        Width="20" Height="20">
+                    <Image Source="/Chronocinema;component/Images/delete.png"/>
                 </Button>
             </Grid>
         </Border>
@@ -189,6 +204,36 @@
                     <TextBlock Text="Watchlist" Style="{StaticResource NavItemText}" Margin="0,2,0,0"/>
                 </StackPanel>
             </Grid>
+        </Border>
+        
+        <!-- Delete Confirmation Dialog -->
+        <Border Grid.Row="0" Grid.RowSpan="3"
+                Style="{StaticResource DeleteDialogOverlayStyle}"
+                Visibility="{Binding ShowDeleteDialog, Converter={StaticResource BooleanToVisibilityConverter}}">
+            <Border Style="{StaticResource DeleteDialogStyle}">
+                <StackPanel>
+                    <TextBlock Text="Are you sure about deleting this media?"
+                               Style="{StaticResource DeleteDialogTextStyle}"/>
+                    <TextBlock Text="{Binding MediaItem.Title}"
+                               Style="{StaticResource DeleteDialogTextStyle}"
+                               FontWeight="Bold"
+                               Margin="0,0,0,10"/>
+                    <TextBlock Text="This action cannot be undone."
+                               Style="{StaticResource DeleteDialogTextStyle}"
+                               FontSize="14"
+                               Margin="0,0,0,20"/>
+                    <StackPanel Style="{StaticResource DeleteDialogButtonContainerStyle}">
+                        <Button Content="Cancel"
+                                Style="{StaticResource CancelButtonStyle}"
+                                Command="{Binding CancelDeleteCommand}"
+                                Margin="0,0,10,0"/>
+                        <Button Content="Delete"
+                                Style="{StaticResource DeleteButtonStyle}"
+                                Command="{Binding ConfirmDeleteCommand}"
+                                Margin="10,0,0,0"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
         </Border>
 
     </Grid>

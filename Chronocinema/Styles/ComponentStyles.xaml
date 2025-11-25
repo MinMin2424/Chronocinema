@@ -611,5 +611,93 @@
         <Setter Property="TextAlignment" Value="Center"/>
         <Setter Property="Margin" Value="0,10,0,0"/>
     </Style>
+    
+    <!-- Delete Confirmation Dialog Styles -->
+    <Style x:Key="DeleteDialogOverlayStyle" TargetType="Border">
+        <Setter Property="Background" Value="#80000000"/>
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+    </Style>
+
+    <Style x:Key="DeleteDialogStyle" TargetType="Border">
+        <Setter Property="Background" Value="{StaticResource CardBackgroundBrush}"/>
+        <Setter Property="CornerRadius" Value="12"/>
+        <Setter Property="Padding" Value="24"/>
+        <Setter Property="Width" Value="280"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="DeleteDialogTextStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource AppFontFamily}"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="Foreground" Value="{StaticResource WhiteBrush}"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0,0,0,20"/>
+    </Style>
+
+    <Style x:Key="DeleteDialogButtonContainerStyle" TargetType="StackPanel">
+        <Setter Property="Orientation" Value="Horizontal"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="DeleteButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="#FFDC2626"/>
+        <Setter Property="Foreground" Value="{StaticResource WhiteBrush}"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Padding" Value="16,8"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border"
+                    Background="{TemplateBinding Background}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    CornerRadius="6"
+                    SnapsToDevicePixels="True">
+                        <ContentPresenter x:Name="contentPresenter"
+                          ContentTemplate="{TemplateBinding Content}"
+                          ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                          Margin="{TemplateBinding Padding}"
+                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="CancelButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource CardBackgroundBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource WhiteBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource GrayBrush}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Padding" Value="16,8"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="6"
+                            SnapsToDevicePixels="True">
+                        <ContentPresenter x:Name="contentPresenter"
+                                          ContentTemplate="{TemplateBinding Content}"
+                                          ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          Margin="{TemplateBinding Padding}"
+                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
 </ResourceDictionary>

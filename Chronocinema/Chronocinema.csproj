@@ -13,6 +13,7 @@
     <None Remove="Images\back-arrow.png" />
     <None Remove="Images\calendar.png" />
     <None Remove="Images\cancel.png" />
+    <None Remove="Images\delete.png" />
     <None Remove="Images\edit.png" />
     <None Remove="Images\home.png" />
     <None Remove="Images\save.png" />
@@ -35,6 +36,9 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\cancel.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\delete.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\edit.png">
