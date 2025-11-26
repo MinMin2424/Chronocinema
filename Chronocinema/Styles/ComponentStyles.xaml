@@ -52,15 +52,28 @@
     <Style x:Key="IconButtonStyle" TargetType="Button">
         <Setter Property="Background" Value="{StaticResource TransparentBrush}"/>
         <Setter Property="BorderThickness" Value="0"/>
-        <Setter Property="Width" Value="15"/>
-        <Setter Property="Height" Value="15"/>
+        <Setter Property="Width" Value="25"/>
+        <Setter Property="Height" Value="25"/>
+        <Setter Property="Padding" Value="5"/>
         <Setter Property="Foreground" Value="{StaticResource WhiteBrush}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border Background="{TemplateBinding Background}" CornerRadius="20">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Border x:Name="border"
+                            Background="{TemplateBinding Background}" 
+                            Padding="{TemplateBinding Padding}"
+                            CornerRadius="20">
+                        <ContentPresenter HorizontalAlignment="Center" 
+                                          VerticalAlignment="Center"/>
                     </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="{StaticResource SelectedItemBrush}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="{StaticResource SelectedItemBrush}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

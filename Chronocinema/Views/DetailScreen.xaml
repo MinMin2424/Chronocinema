@@ -53,7 +53,7 @@
                         Style="{StaticResource IconButtonStyle}"
                         Command="{Binding EditMediaCommand}"
                         Margin="10,0"
-                        Width="20" Height="20">
+                        Width="25" Height="25">
                     <Image Source="/Chronocinema;component/Images/edit.png"/>
                 </Button>
 
@@ -62,7 +62,7 @@
                         Style="{StaticResource IconButtonStyle}"
                         Command="{Binding DeleteMediaCommand}"
                         Margin="10,0"
-                        Width="20" Height="20">
+                        Width="25" Height="25">
                     <Image Source="/Chronocinema;component/Images/delete.png"/>
                 </Button>
             </Grid>

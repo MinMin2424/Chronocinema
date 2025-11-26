@@ -73,11 +73,6 @@ namespace Chronocinema.ViewModels
 
     private void ExecuteSave()
         {
-            if (MediaItem.Rating < 0 || MediaItem.Rating > 10)
-            {
-               MessageBox.Show("Rating must be between 0 and 10.", "Invalid Rating", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
-            }
             var detailViewModel = new DetailViewModel(MediaItem);
             LocatorViewModel.Instance.DetailViewModel = detailViewModel;
             NavigationService.Instance.NavigateTo(new DetailScreen { DataContext = detailViewModel});
