@@ -73,7 +73,7 @@
             <StackPanel Margin="16">
 
                 <!-- Poster and Status -->
-                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,0,0,20">
+                <StackPanel Orientation="Vertical" Style="{StaticResource MovieDetailStackPanelStyle}">
                     <!-- Movie Poster -->
                     <Border Style="{StaticResource MovieDetailPosterBorderStyle}">
                         <Image Source="{Binding MediaItem.PosterUrl}" Stretch="UniformToFill">
@@ -83,7 +83,7 @@
                         </Image>
                     </Border>
                     <!-- Watch Status -->
-                    <Border Style="{StaticResource StatusBadgeStyle}" HorizontalAlignment="Center">
+                    <Border Style="{StaticResource StatusBadgeStyle}">
                         <TextBlock Text="{Binding MediaItem.Status}"
                                Style="{StaticResource StatusTextStyle}"/>
                     </Border>
@@ -175,7 +175,7 @@
                 </Grid.ColumnDefinitions>
 
                 <!-- Home Nav Item -->
-                <StackPanel Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel Grid.Column="0" Style="{StaticResource BottomNavItemStyle}">
                     <Border Style="{StaticResource NavItemContainerStyle}">
                         <Button Style="{StaticResource IconButtonStyle}" Command="{Binding NavigateToHomeCommand}">
                             <Image Source="../Images/home.png"/>
@@ -185,7 +185,7 @@
                 </StackPanel>
 
                 <!-- Add Nav Item -->
-                <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel Grid.Column="1" Style="{StaticResource BottomNavItemStyle}">
                     <Border Style="{StaticResource NavItemContainerStyle}">
                         <Button Style="{StaticResource IconButtonStyle}" Command="{Binding ShowAddMediaCommand}">
                             <Image Source="../Images/add.png"/>
@@ -195,7 +195,7 @@
                 </StackPanel>
 
                 <!-- Watchlist Nav Item -->
-                <StackPanel Grid.Column="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel Grid.Column="2" Style="{StaticResource BottomNavItemStyle}">
                     <Border Style="{StaticResource NavItemContainerStyle}">
                         <Button Style="{StaticResource IconButtonStyle}" Command="{Binding NavigateToWatchlistCommand}">
                             <Image Source="../Images/watchlist.png"/>

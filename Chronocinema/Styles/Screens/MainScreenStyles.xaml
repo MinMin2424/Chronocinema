@@ -1,0 +1,37 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--Movie Card Style-->
+    <Style x:Key="MovieCardStyle" TargetType="Border">
+        <Setter Property="Background" Value="{StaticResource CardBackgroundBrush}"/>
+        <Setter Property="CornerRadius" Value="8"/>
+        <Setter Property="Width" Value="100"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="Margin" Value="4"/>
+    </Style>
+
+    <!--Movie Poster Border-->
+    <Style x:Key="MoviePosterBorderStyle" TargetType="Border">
+        <Setter Property="CornerRadius" Value="6"/>
+        <Setter Property="Background" Value="{StaticResource CardBackgroundBrush}"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Height" Value="120"/>
+        <Setter Property="Margin" Value="0,0,0,4"/>
+    </Style>
+
+    <!--Movie Image Style-->
+    <Style x:Key="MovieImageStyle" TargetType="Image">
+        <Setter Property="Width" Value="90"/>
+        <Setter Property="Height" Value="120"/>
+        <Setter Property="Stretch" Value="UniformToFill"/>
+    </Style>
+    
+    <!-- Item StackPanel -->
+    <Style x:Key="MovieStackPanelStyle" TargetType="StackPanel">
+        <Setter Property="Orientation" Value="Vertical"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="4"/>
+    </Style>
+
+</ResourceDictionary>

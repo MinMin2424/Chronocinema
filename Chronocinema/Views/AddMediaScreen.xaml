@@ -50,7 +50,7 @@
         </Border>
         
         <!-- Main Content -->
-        <StackPanel Grid.Row="1" HorizontalAlignment="Center" Width="280" Margin="0,50,0,0">
+        <StackPanel Grid.Row="1" Style="{StaticResource AddMediaStackPanelStyle}">
             
             <!-- Title Input -->
             <TextBox x:Name="TitleTextBox"
@@ -85,7 +85,7 @@
                 </Grid.ColumnDefinitions>
 
                 <!-- Home Nav Item -->
-                <StackPanel Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel Grid.Column="0" Style="{StaticResource BottomNavItemStyle}">
                     <Border Style="{StaticResource NavItemContainerStyle}">
                         <Button Style="{StaticResource IconButtonStyle}" Command="{Binding NavigateToHomeCommand}">
                             <Image Source="../Images/home.png"/>
@@ -95,7 +95,7 @@
                 </StackPanel>
 
                 <!-- Add Nav Item -->
-                <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel Grid.Column="1" Style="{StaticResource BottomNavItemStyle}">
                     <Border Style="{StaticResource NavItemSelectedContainerStyle}">
                         <Button Style="{StaticResource IconButtonStyle}" Command="{Binding ShowAddMediaCommand}">
                             <Image Source="../Images/add.png"/>
@@ -105,7 +105,7 @@
                 </StackPanel>
 
                 <!-- Watchlist Nav Item -->
-                <StackPanel Grid.Column="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel Grid.Column="2" Style="{StaticResource BottomNavItemStyle}">
                     <Border Style="{StaticResource NavItemContainerStyle}">
                         <Button Style="{StaticResource IconButtonStyle}" Command="{Binding NavigateToWatchlistCommand}">
                             <Image Source="../Images/watchlist.png"/>

@@ -10,6 +10,15 @@
                 <ResourceDictionary Source="Styles/Brushes.xaml"/>
                 <ResourceDictionary Source="Styles/Typography.xaml"/>
                 <ResourceDictionary Source="Styles/ComponentStyles.xaml"/>
+                
+                <ResourceDictionary Source="/Styles/Components/RatingSliderStyles.xaml"/>
+                <ResourceDictionary Source="/Styles/Components/DeleteDialogStyles.xaml"/>
+                
+                <ResourceDictionary Source="/Styles/Screens/MainScreenStyles.xaml"/>
+                <ResourceDictionary Source="/Styles/Screens/DetailScreenStyles.xaml"/>
+                <ResourceDictionary Source="/Styles/Screens/EditMediaScreenStyles.xaml"/>
+                <ResourceDictionary Source="/Styles/Screens/AddMediaScreenStyles.xaml"/>
+                <ResourceDictionary Source="/Styles/Screens/WatchlistScreenStyles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
