@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Chronocinema.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,7 @@ namespace Chronocinema.ViewModels
         private LocatorViewModel() 
         { 
             MainViewModel = new MainViewModel();
+            WatchlistViewModel = new WatchlistViewModel();
         }
     }
 }

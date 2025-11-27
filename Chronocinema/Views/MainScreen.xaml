@@ -30,7 +30,7 @@
                 <TextBlock Text="Chronocinema" Style="{StaticResource HeaderText}" VerticalAlignment="Center"/>
                 <!-- Action Buttons -->
                 <StackPanel Grid.Column="2" Orientation="Horizontal">
-                    <Button Style="{StaticResource IconButtonStyle}" Margin="20,10,0,10">
+                    <Button Style="{StaticResource IconButtonStyle}" Command="{Binding NavigateToProfileCommand}" Margin="20,10,0,10">
                         <Image Source="/Images/user.png"/>
                     </Button>
                     <Button Style="{StaticResource IconButtonStyle}" Command="{Binding ShowAddMediaCommand}" Margin="20,10,0,10">

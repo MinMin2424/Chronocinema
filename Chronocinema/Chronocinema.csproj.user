@@ -14,7 +14,16 @@
     <Compile Update="Views\EditMediaScreen.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\LoginScreen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\MainScreen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ProfileScreen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\RegisterScreen.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\WatchlistScreen.xaml.cs">

@@ -29,7 +29,7 @@
                 <!-- App Title -->
                 <TextBlock Grid.Column="0" Text="Watchlist" Style="{StaticResource HeaderText}" VerticalAlignment="Center"/>
                 <!-- Action Buttons -->
-                <Button Grid.Column="1" Style="{StaticResource IconButtonStyle}" Margin="20,10,0,10">
+                <Button Grid.Column="1" Style="{StaticResource IconButtonStyle}" Command="{Binding NavigateToProfileCommand}" Margin="20,10,0,10">
                     <Image Source="/Images/user.png"/>
                 </Button>
             </Grid>

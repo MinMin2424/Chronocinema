@@ -17,9 +17,13 @@ namespace Chronocinema.ViewModels
 
         private MediaItem _mediaItem;
         private bool _showDeleteDialog;
+        private readonly IAuthService _authService;
+        private readonly IUserService _userService;
 
         public DetailViewModel(MediaItem mediaItem)
         {
+            _authService = AuthService.Instance;
+            _userService = UserService.Instance;
             MediaItem = mediaItem;
 
             GoBackCommand = new RelayCommand(ExecuteGoBack);
@@ -72,11 +76,16 @@ namespace Chronocinema.ViewModels
 
         private void ExecuteConfirmDelete()
         {
-            var mainViewModel = LocatorViewModel.Instance.MainViewModel;
-            var itemToRemove = mainViewModel.MediaItems.FirstOrDefault(item => item.Id == MediaItem.Id);
-            if (itemToRemove != null)
+            if (_authService.IsLoggedIn)
             {
-                mainViewModel.MediaItems.Remove(itemToRemove);
+                _userService.RemoveMediaItem(_authService.CurrentUser, MediaItem);
+                var mainViewModel = LocatorViewModel.Instance.MainViewModel;
+                var itemToRemove = mainViewModel.MediaItems.FirstOrDefault(item => item.Id == MediaItem.Id);
+                if (itemToRemove != null)
+                {
+                    mainViewModel.MediaItems.Remove(itemToRemove);
+                }
+                LocatorViewModel.Instance.WatchlistViewModel.RefreshWatchlist();
             }
             ShowDeleteDialog = false;
             NavigationService.Instance.NavigateTo(new MainScreen());

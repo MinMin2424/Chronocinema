@@ -27,6 +27,15 @@
                 <DataTemplate DataType="{x:Type views:AddMediaScreen}">
                     <views:AddMediaScreen DataContext="{Binding}"/>
                 </DataTemplate>
+                <DataTemplate DataType="{x:Type views:ProfileScreen}">
+                    <views:ProfileScreen DataContext="{Binding}"/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type views:RegisterScreen}">
+                    <views:RegisterScreen DataContext="{Binding}"/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type views:LoginScreen}">
+                    <views:LoginScreen DataContext="{Binding}"/>
+                </DataTemplate>
             </ContentControl.Resources>
         </ContentControl>
     </Grid>

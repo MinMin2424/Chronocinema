@@ -1,0 +1,46 @@
+﻿using Chronocinema.Services;
+using Chronocinema.ViewModels;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+
+namespace Chronocinema.Views
+{
+    /// <summary>
+    /// Interaction logic for RegisterScreen.xaml
+    /// </summary>
+    public partial class RegisterScreen : UserControl
+    {
+        public RegisterScreen()
+        {
+            InitializeComponent();
+            DataContext = new RegisterViewModel();
+        }
+
+        private void PasswordBox_PasswordChanged(object sender, EventArgs e)
+        {
+            if (DataContext is RegisterViewModel registerViewModel)
+            {
+                registerViewModel.Password = ((PasswordBox)sender).Password;
+            }
+        }
+
+        private void ConfirmPasswordBox_PasswordChanged(object sender, EventArgs e)
+        {
+            if (DataContext is RegisterViewModel registerViewModel)
+            {
+                registerViewModel.ConfirmPassword = ((PasswordBox)sender).Password;
+            }
+        }
+    }
+}

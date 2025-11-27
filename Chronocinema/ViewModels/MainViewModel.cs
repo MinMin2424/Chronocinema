@@ -16,14 +16,28 @@ namespace Chronocinema.ViewModels
     {
         private object _currentView;
         private ObservableCollection<MediaItem> _mediaItems;
+        private readonly IAuthService _authService;
+        private readonly IUserService _userService;
 
         public MainViewModel()
         {
-            var mainScreen = new MainScreen();
-            mainScreen.DataContext = this;
-            CurrentView = mainScreen;
+            _authService = AuthService.Instance;
+            _userService = UserService.Instance;
+
             MediaItems = new ObservableCollection<MediaItem>();
-            LoadSampleData();
+
+            if (_authService.IsLoggedIn)
+            {
+                LoadUserMedia(_authService.CurrentUser);
+                var mainScreen = new MainScreen();
+                mainScreen.DataContext = this;
+                CurrentView = mainScreen;
+            }
+            else
+            {
+                CurrentView = new LoginScreen();
+            }
+                //LoadSampleData();
 
             NavigationService.Instance.ViewChanged += OnViewChanged;
 
@@ -32,6 +46,7 @@ namespace Chronocinema.ViewModels
             NavigateToHomeCommand = new RelayCommand(ExecuteNavigateToHome);
             ShowAddMediaCommand = new RelayCommand(ExecuteShowAddMedia);
             NavigateToWatchlistCommand = new RelayCommand(ExecuteNavigateToWatchlist);
+            NavigateToProfileCommand = new RelayCommand(ExecuteNavigateToProfile);
         }
 
         public object CurrentView
@@ -46,6 +61,18 @@ namespace Chronocinema.ViewModels
             set => SetProperty(ref _mediaItems, value);
         }
 
+        public void LoadUserMedia(User user)
+        {
+            MediaItems.Clear();
+            if (user?.MediaItems != null)
+            {
+                foreach (var item in user.MediaItems)
+                {
+                    MediaItems.Add(item);
+                }
+            }
+        }
+
         public void RefreshMediaItems()
         {
             OnPropertyChanged(nameof(MediaItems));
@@ -56,6 +83,7 @@ namespace Chronocinema.ViewModels
         public ICommand NavigateToHomeCommand { get; }
         public ICommand ShowAddMediaCommand { get; }
         public ICommand NavigateToWatchlistCommand { get; }
+        public ICommand NavigateToProfileCommand { get; }
 
         private void ExecuteNavigateToDetail(MediaItem mediaItem)
         {
@@ -86,6 +114,12 @@ namespace Chronocinema.ViewModels
         private void ExecuteNavigateToWatchlist()
         {
             NavigationService.Instance.NavigateTo(new WatchlistScreen());
+        }
+
+        private void ExecuteNavigateToProfile()
+        {
+            var profileViewModel = new ProfileViewModel();
+            NavigationService.Instance.NavigateTo(new ProfileScreen { DataContext = profileViewModel});
         }
 
         private void OnViewChanged(object view)

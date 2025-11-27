@@ -16,7 +16,9 @@
     <None Remove="Images\delete.png" />
     <None Remove="Images\edit.png" />
     <None Remove="Images\home.png" />
+    <None Remove="Images\logout.png" />
     <None Remove="Images\save.png" />
+    <None Remove="Images\user-profile.jpg" />
     <None Remove="Images\user.png" />
     <None Remove="Images\watchlist.png" />
   </ItemGroup>
@@ -47,7 +49,13 @@
     <Resource Include="Images\home.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\logout.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\save.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\user-profile.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\user.png">

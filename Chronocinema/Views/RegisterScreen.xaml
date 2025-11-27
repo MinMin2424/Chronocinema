@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="Chronocinema.Views.RegisterScreen"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Chronocinema.Views"
+             xmlns:converters="clr-namespace:Chronocinema.Converters"
+             mc:Ignorable="d" 
+             d:Style="{StaticResource ScreenStyle}">
+
+    <UserControl.Resources>
+        <converters:StringToVisibilityConverter x:Key="StringToVisibilityConverter"/>
+    </UserControl.Resources>
+    
+    <Grid Margin="20">
+        <Border VerticalAlignment="Center">
+            <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                <StackPanel Margin="30">
+                    <!-- Header -->
+                    <TextBlock Text="Create Account"
+                               Style="{StaticResource HeaderText}"
+                               TextAlignment="Center" Margin="0,0,0,30"/>
+                    <!-- Username Field -->
+                    <TextBlock Text="Username"
+                               Style="{StaticResource FormLabelText}"
+                               VerticalAlignment="Center"/>
+                    <TextBox Text="{Binding Username}"
+                             Style="{StaticResource ModernTextBox}"
+                             Margin="0,0,0,25"/>
+                    <!-- Email Field -->
+                    <TextBlock Text="Email"
+                               Style="{StaticResource FormLabelText}"
+                               VerticalAlignment="Center"/>
+                    <TextBox Text="{Binding Email}"
+                             Style="{StaticResource ModernTextBox}"
+                             Margin="0,0,0,25"/>
+                    <!-- Password Field -->
+                    <TextBlock Text="Password"
+                               Style="{StaticResource FormLabelText}"
+                               VerticalAlignment="Center"/>
+                    <PasswordBox x:Name="PasswordBox"
+                                 PasswordChanged="PasswordBox_PasswordChanged"
+                                 Style="{StaticResource PasswordBoxStyle}"
+                                 Margin="0,0,0,25"/>
+                    <!-- Confirm Password Field -->
+                    <TextBlock Text="Confirm Password"
+                               Style="{StaticResource FormLabelText}"
+                               VerticalAlignment="Center"/>
+                    <PasswordBox x:Name="ConfirmPasswordBox"
+                                 PasswordChanged="ConfirmPasswordBox_PasswordChanged"
+                                 Style="{StaticResource PasswordBoxStyle}"
+                                 Margin="0,0,0,25"/>
+                    <!-- Register Button -->
+                    <Button Content="Register"
+                            Command="{Binding RegisterCommand}"
+                            Style="{StaticResource PrimaryActionButton}"
+                            Width="240" Height="35"
+                            Margin="0,10,0,0"/>
+                    <!-- Register Link -->
+                    <TextBlock Style="{StaticResource LinkTextBlock}">
+                        <Run Text="Already have an account?" Style="{StaticResource RunStyle}"/>
+                        <Hyperlink Command="{Binding LoginCommand}" Style="{StaticResource HyperlinkStyle}">
+                            <Run Text="Login"/>
+                        </Hyperlink>
+                    </TextBlock>
+                    <!-- Error Message -->
+                    <TextBlock Text="{Binding ErrorMessage}"
+                               Style="{StaticResource ErrorMessage}"
+                               Visibility="{Binding ErrorMessage, Converter={StaticResource StringToVisibilityConverter}}"/>
+                    <!-- Success Message -->
+                    <TextBlock Text="{Binding SuccessMessage}"
+                               Style="{StaticResource SuccessMessage}"
+                               Visibility="{Binding SuccessMessage, Converter={StaticResource StringToVisibilityConverter}}"/>
+                    
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</UserControl>

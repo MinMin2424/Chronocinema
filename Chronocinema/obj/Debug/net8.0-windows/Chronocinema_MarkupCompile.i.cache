@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\App.xaml
-20267823980
+25787122860
 
-282140889051
+37-1821677182
 1991962965141
-MainWindow.xaml;Styles\Brushes.xaml;Styles\Colors.xaml;Styles\ComponentStyles.xaml;Styles\Components\DeleteDialogStyles.xaml;Styles\Components\RatingSliderStyles.xaml;Styles\Screens\AddMediaScreenStyles.xaml;Styles\Screens\DetailScreenStyles.xaml;Styles\Screens\EditMediaScreenStyles.xaml;Styles\Screens\MainScreenStyles.xaml;Styles\Screens\WatchlistScreenStyles.xaml;Styles\Typography.xaml;UserControls\RatingUserControl.xaml;Views\AddMediaScreen.xaml;Views\DetailScreen.xaml;Views\EditMediaScreen.xaml;Views\MainScreen.xaml;Views\WatchlistScreen.xaml;Windows\DetailWindow.xaml;Windows\EditMediaWindow.xaml;
+MainWindow.xaml;Styles\Brushes.xaml;Styles\Colors.xaml;Styles\ComponentStyles.xaml;Styles\Components\DeleteDialogStyles.xaml;Styles\Components\RatingSliderStyles.xaml;Styles\Screens\AddMediaScreenStyles.xaml;Styles\Screens\AuthScreenStyles.xaml;Styles\Screens\DetailScreenStyles.xaml;Styles\Screens\EditMediaScreenStyles.xaml;Styles\Screens\MainScreenStyles.xaml;Styles\Screens\ProfileScreenStyles.xaml;Styles\Screens\WatchlistScreenStyles.xaml;Styles\Typography.xaml;UserControls\RatingUserControl.xaml;Views\AddMediaScreen.xaml;Views\DetailScreen.xaml;Views\EditMediaScreen.xaml;Views\LoginScreen.xaml;Views\MainScreen.xaml;Views\ProfileScreen.xaml;Views\RegisterScreen.xaml;Views\WatchlistScreen.xaml;Windows\DetailWindow.xaml;Windows\EditMediaWindow.xaml;
 
-True
+False
 

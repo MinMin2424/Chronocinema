@@ -1,5 +1,7 @@
 ﻿using Chronocinema.Models;
+using Chronocinema.Services;
 using Chronocinema.ViewModels;
+using Chronocinema.Views;
 using Chronocinema.Windows;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -23,11 +25,13 @@ namespace Chronocinema
     public partial class MainWindow : Window
     {
         public MainViewModel ViewModel { get; }
+        private readonly IAuthService _authService;
 
         public MainWindow()
         {
             InitializeComponent();
             
+            _authService = AuthService.Instance;
             ViewModel = LocatorViewModel.Instance.MainViewModel;
             DataContext = ViewModel;
 

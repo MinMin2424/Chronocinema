@@ -14,10 +14,15 @@ namespace Chronocinema.ViewModels
         private string _title;
         private string _errorMessage;
         private bool _isSearching;
+        private readonly IAuthService _authService;
+        private readonly IUserService _userService;
 
         public AddMediaViewModel()
         {
-            SearchCommand = new RelayCommand(async () => await ExecuteSearch(), _ => !string.IsNullOrWhiteSpace(Title) && !IsSearching);
+            _authService = AuthService.Instance;
+            _userService = UserService.Instance;
+
+            SearchCommand = new RelayCommand(async () => await ExecuteSearch(), () => !string.IsNullOrWhiteSpace(Title) && !IsSearching);
             GoBackCommand = new RelayCommand(ExecuteGoBack);
             NavigateToHomeCommand = new RelayCommand(ExecuteNavigateToHome);
             NavigateToWatchlistCommand = new RelayCommand(ExecuteNavigateToWatchlist);
@@ -69,10 +74,13 @@ namespace Chronocinema.ViewModels
                 if (mediaItem != null)
                 {
                     mediaItem.Id = GetNextId();
-                    LocatorViewModel.Instance.MainViewModel.MediaItems.Add(mediaItem);
-                    var detailViewModel = new DetailViewModel(mediaItem);
+                    _userService.AddMediaItem(_authService.CurrentUser, mediaItem);
 
+                    LocatorViewModel.Instance.MainViewModel.MediaItems.Add(mediaItem);
                     LocatorViewModel.Instance.MainViewModel.RefreshMediaItems();
+                    LocatorViewModel.Instance.WatchlistViewModel.RefreshWatchlist();
+                    
+                    var detailViewModel = new DetailViewModel(mediaItem);
 
                     LocatorViewModel.Instance.DetailViewModel = detailViewModel;
                     NavigationService.Instance.NavigateTo(new DetailScreen { DataContext = detailViewModel });
