@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Chronocinema.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,39 @@ namespace Chronocinema.Views
         public MainScreen()
         {
             InitializeComponent();
+            Loaded += MainScreen_Loaded;
+        }
+
+        private void MainScreen_Loaded(object sender, RoutedEventArgs e)
+        {
+            UpdateEmptyState();
+            if (DataContext is MainViewModel viewModel)
+            {
+                viewModel.PropertyChanged += (s, args) =>
+                {
+                    if (args.PropertyName == nameof(MainViewModel.MediaItems))
+                    {
+                        UpdateEmptyState();
+                    }
+                };
+            }
+        }
+
+        private void UpdateEmptyState()
+        {
+            if (DataContext is MainViewModel viewModel)
+            {
+                if (viewModel.MediaItems == null || viewModel.MediaItems.Count == 0)
+                {
+                    EmptyStateBorder.Visibility = Visibility.Visible;
+                    ContentScrollViewer.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    EmptyStateBorder.Visibility = Visibility.Collapsed;
+                    ContentScrollViewer.Visibility = Visibility.Visible;
+                }
+            }
         }
 
         private void MovieCard_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

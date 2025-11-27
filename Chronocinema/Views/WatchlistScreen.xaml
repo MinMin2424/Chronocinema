@@ -35,18 +35,23 @@
             </Grid>
         </Border>
 
+        <Grid Grid.Row="1">
+            <Border x:Name="EmptyStateBorder" Style="{StaticResource EmptyStateBorderStyle}">
+                <StackPanel Style="{StaticResource EmptyStateStackPanelStyle}">
+                    <!-- Image -->
+                    <Border Style="{StaticResource EmptyStatePictureBorderStyle}">
+                        <Image Source="/Images/watchlist-app.png" Width="100" Height="100"/>
+                    </Border>
+                    <!-- Context -->
+                    <TextBlock Text="You collection is empty"
+                               Style="{StaticResource EmptyStateMainTextBlockStyle}"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+
         <!-- Main Content -->
         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Hidden" Padding="16">
             <StackPanel>
-                
-                <!-- Empty State -->
-                <TextBlock x:Name="EmptyStateText"
-                           Text="No items in watchlist"
-                           Style="{StaticResource SectionHeaderTextStyle}"
-                           TextAlignment="Center"
-                           VerticalAlignment="Center"
-                           Margin="0,100,0,0"
-                           Visibility="Collapsed"/>
                 
                 <!-- Watchlist Items -->
                 <ItemsControl ItemsSource="{Binding WatchlistItems}">

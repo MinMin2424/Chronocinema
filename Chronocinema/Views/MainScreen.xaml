@@ -41,7 +41,27 @@
         </Border>
 
         <!-- Main Content -->
-        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Hidden">
+
+        <!-- Empty State -->
+        <Grid Grid.Row="1">
+            <Border x:Name="EmptyStateBorder" Style="{StaticResource EmptyStateBorderStyle}">
+                <StackPanel Style="{StaticResource EmptyStateStackPanelStyle}">
+                    <!-- Image -->
+                    <Border Style="{StaticResource EmptyStatePictureBorderStyle}">
+                        <Image Source="/Images/movies-app.png" Width="100" Height="100"/>
+                    </Border>
+                    <!-- Context -->
+                    <TextBlock Text="You collection is empty"
+                       Style="{StaticResource EmptyStateMainTextBlockStyle}"/>
+                    <TextBlock Text="Start building your movie and series collection by adding your first title"
+                       Style="{StaticResource EmptyStateBodyTextBlockStyle}"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <ScrollViewer x:Name="ContentScrollViewer"
+                      Grid.Row="1"
+                      VerticalScrollBarVisibility="Hidden">
             <ItemsControl ItemsSource="{Binding MediaItems}" Margin="6">
 
                 <ItemsControl.ItemsPanel>
