@@ -1,11 +1,4 @@
-﻿using Chronocinema.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Chronocinema.ViewModels
+﻿namespace Chronocinema.ViewModels
 {
     public class LocatorViewModel
     {

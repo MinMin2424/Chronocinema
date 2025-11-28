@@ -1,13 +1,6 @@
 ﻿using Chronocinema.Models;
 using Chronocinema.Services;
 using Chronocinema.Views;
-using Chronocinema.Windows;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Input;
 
 namespace Chronocinema.ViewModels

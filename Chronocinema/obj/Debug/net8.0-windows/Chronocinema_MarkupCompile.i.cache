@@ -16,5 +16,5 @@ C:\Users\minat\OneDrive\FEL_CVUT\5semestr\IUR\Chronocinema\Chronocinema\App.xaml
 1991962965141
 MainWindow.xaml;Styles\Brushes.xaml;Styles\Colors.xaml;Styles\ComponentStyles.xaml;Styles\Components\DeleteDialogStyles.xaml;Styles\Components\RatingSliderStyles.xaml;Styles\Screens\AddMediaScreenStyles.xaml;Styles\Screens\AuthScreenStyles.xaml;Styles\Screens\DetailScreenStyles.xaml;Styles\Screens\EditMediaScreenStyles.xaml;Styles\Screens\MainScreenStyles.xaml;Styles\Screens\ProfileScreenStyles.xaml;Styles\Screens\WatchlistScreenStyles.xaml;Styles\Typography.xaml;UserControls\RatingUserControl.xaml;Views\AddMediaScreen.xaml;Views\DetailScreen.xaml;Views\EditMediaScreen.xaml;Views\LoginScreen.xaml;Views\MainScreen.xaml;Views\ProfileScreen.xaml;Views\RegisterScreen.xaml;Views\WatchlistScreen.xaml;Windows\DetailWindow.xaml;Windows\EditMediaWindow.xaml;
 
-False
+True
 

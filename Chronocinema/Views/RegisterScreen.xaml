@@ -55,7 +55,8 @@
                             Command="{Binding RegisterCommand}"
                             Style="{StaticResource PrimaryActionButton}"
                             Width="240" Height="35"
-                            Margin="0,10,0,0"/>
+                            Margin="0,10,0,0"
+                            IsDefault="True"/>
                     <!-- Register Link -->
                     <TextBlock Style="{StaticResource LinkTextBlock}">
                         <Run Text="Already have an account?" Style="{StaticResource RunStyle}"/>
