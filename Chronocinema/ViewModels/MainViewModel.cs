@@ -81,7 +81,7 @@ namespace Chronocinema.ViewModels
 
         private void ExecuteNavigateToDetail(MediaItem mediaItem)
         {
-            var detailViewModel = new DetailViewModel(mediaItem);
+            var detailViewModel = new DetailViewModel(mediaItem, new MainScreen());
             LocatorViewModel.Instance.DetailViewModel = detailViewModel;
             NavigationService.Instance.NavigateTo(new DetailScreen { DataContext = detailViewModel});
         }

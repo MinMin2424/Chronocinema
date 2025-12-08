@@ -12,12 +12,14 @@ namespace Chronocinema.ViewModels
         private readonly IAuthService _authService;
         private readonly IUserService _userService;
         private readonly IToastService _toastService;
+        private object _previousView;
 
-        public EditViewModel(MediaItem mediaItem)
+        public EditViewModel(MediaItem mediaItem, object previousView = null)
         {
             _authService = AuthService.Instance;
             _userService = UserService.Instance;
             _toastService = new ToastService();
+            _previousView = previousView;
 
             _originalMediaItem = new MediaItem
             {
@@ -89,15 +91,31 @@ namespace Chronocinema.ViewModels
                 LocatorViewModel.Instance.WatchlistViewModel.RefreshWatchlist();
                 _toastService.ShowToast($"Changes were successfully saved!");
             }
-            var detailViewModel = new DetailViewModel(MediaItem);
-            LocatorViewModel.Instance.DetailViewModel = detailViewModel;
-            NavigationService.Instance.NavigateTo(new DetailScreen { DataContext = detailViewModel });
+            if (_previousView != null)
+            {
+                var detailViewModel = new DetailViewModel(MediaItem);
+                LocatorViewModel.Instance.DetailViewModel = detailViewModel;
+                NavigationService.Instance.NavigateTo(new DetailScreen { DataContext = detailViewModel });
+            }
+            else
+            {
+                NavigationService.Instance.GoBack();
+            }
+            
         }
         private void ExecuteCancel()
         {
-            var detailViewModel = new DetailViewModel(_originalMediaItem);
-            LocatorViewModel.Instance.DetailViewModel = detailViewModel;
-            NavigationService.Instance.NavigateTo(new DetailScreen { DataContext = detailViewModel });
+            if (_previousView != null)
+            {
+                var detailViewModel = new DetailViewModel(_originalMediaItem);
+                LocatorViewModel.Instance.DetailViewModel = detailViewModel;
+                NavigationService.Instance.NavigateTo(new DetailScreen { DataContext = detailViewModel });
+            }
+            else
+            {
+                NavigationService.Instance.GoBack();
+            }
+            
         }
     }
 }

@@ -63,7 +63,7 @@ namespace Chronocinema.ViewModels
         {
             if (item != null)
             {
-                var detailViewModel = new DetailViewModel(item);
+                var detailViewModel = new DetailViewModel(item, new WatchlistScreen());
                 LocatorViewModel.Instance.DetailViewModel = detailViewModel;
                 NavigationService.Instance.NavigateTo(new DetailScreen { DataContext = detailViewModel });
             }

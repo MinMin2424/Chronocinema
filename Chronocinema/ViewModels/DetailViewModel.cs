@@ -12,12 +12,14 @@ namespace Chronocinema.ViewModels
         private bool _showDeleteDialog;
         private readonly IAuthService _authService;
         private readonly IUserService _userService;
+        private object _previousView;
 
-        public DetailViewModel(MediaItem mediaItem)
+        public DetailViewModel(MediaItem mediaItem, object previousView = null)
         {
             _authService = AuthService.Instance;
             _userService = UserService.Instance;
             MediaItem = mediaItem;
+            _previousView = previousView;
 
             GoBackCommand = new RelayCommand(ExecuteGoBack);
             EditMediaCommand = new RelayCommand(ExecuteEditMedia);
@@ -52,7 +54,14 @@ namespace Chronocinema.ViewModels
 
         private void ExecuteGoBack()
         {
-            NavigationService.Instance.NavigateTo(new MainScreen());
+            if (_previousView != null)
+            {
+                NavigationService.Instance.NavigateTo(_previousView);
+            }
+            else
+            {
+                NavigationService.Instance.GoBack();
+            }
         }
 
         private void ExecuteEditMedia()
@@ -81,7 +90,7 @@ namespace Chronocinema.ViewModels
                 LocatorViewModel.Instance.WatchlistViewModel.RefreshWatchlist();
             }
             ShowDeleteDialog = false;
-            NavigationService.Instance.NavigateTo(new MainScreen());
+            ExecuteGoBack();
         }
 
         private void ExecuteCancelDelete()
