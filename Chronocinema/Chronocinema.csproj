@@ -16,6 +16,7 @@
     <None Remove="Images\delete.png" />
     <None Remove="Images\edit.png" />
     <None Remove="Images\home.png" />
+    <None Remove="Images\info.png" />
     <None Remove="Images\logout.png" />
     <None Remove="Images\movies-app.png" />
     <None Remove="Images\save.png" />
@@ -49,6 +50,9 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\home.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\info.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\logout.png">

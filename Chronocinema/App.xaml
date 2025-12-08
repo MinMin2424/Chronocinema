@@ -27,6 +27,7 @@
             <converters:BooleanToSearchingConverter x:Key="BooleanToSearchingConverter"/>
             <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
             <converters:StringToVisibilityConverter x:Key="StringToVisibilityConverter"/>
+            <converters:StringIsNullOrEmptyToVisibilityConverter x:Key="StringIsNullOrEmptyToVisibilityConverter"/>
             
         </ResourceDictionary>
     </Application.Resources>

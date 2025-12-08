@@ -7,8 +7,44 @@
         <Setter Property="Width" Value="280"/>
         <Setter Property="Margin" Value="0,50,0,0"/>
     </Style>
-    
-    
+
+    <Style x:Key="PlaceholderTextStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{StaticResource GrayBrush}"/>
+        <Setter Property="FontStyle" Value="Italic"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="IsHitTestVisible" Value="False"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="PopupStyle" TargetType="Popup">
+        <Setter Property="AllowsTransparency" Value="True"/>
+        <Setter Property="PopupAnimation" Value="Fade"/>
+        <Setter Property="Placement" Value="Center"/>
+        <Setter Property="StaysOpen" Value="False"/>
+    </Style>
+
+    <Style x:Key="PopupBorderStyle" TargetType="Border">
+        <Setter Property="Background" Value="{StaticResource CardBackgroundBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource LightPurpleBrush}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="CornerRadius" Value="8"/>
+        <Setter Property="Padding" Value="15"/>
+    </Style>
+
+    <Style x:Key="PopupMainStackPanelStyle" TargetType="StackPanel">
+        <Setter Property="Orientation" Value="Vertical"/>
+        <Setter Property="Margin" Value="0,0,0,10"/>
+    </Style>
+
+    <Style x:Key="PopupInnerStackPanelStyle" TargetType="StackPanel">
+        <Setter Property="Orientation" Value="Horizontal"/>
+        <Setter Property="Margin" Value="0,0,0,5"/>
+    </Style>
+
+    <Style x:Key="PopupBodyTextStyle" TargetType="TextBlock" BasedOn="{StaticResource UserProfileInfoStyle}">
+        <Setter Property="TextWrapping" Value="Wrap"/>
+    </Style>
+
     <Style x:Key="ErrorMessageTextBlockStyle" TargetType="TextBlock">
         <Setter Property="Foreground" Value="{StaticResource LightPurpleBrush}"/>
         <Setter Property="FontSize" Value="14"/>

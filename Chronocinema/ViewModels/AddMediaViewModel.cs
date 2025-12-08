@@ -11,6 +11,7 @@ namespace Chronocinema.ViewModels
         private bool _isSearching;
         private readonly IAuthService _authService;
         private readonly IUserService _userService;
+        private bool _isInfoPopupOpen;
 
         public AddMediaViewModel()
         {
@@ -21,6 +22,8 @@ namespace Chronocinema.ViewModels
             GoBackCommand = new RelayCommand(ExecuteGoBack);
             NavigateToHomeCommand = new RelayCommand(ExecuteNavigateToHome);
             NavigateToWatchlistCommand = new RelayCommand(ExecuteNavigateToWatchlist);
+            ShowInfoCommand = new RelayCommand(() => IsInfoPopupOpen = true);
+            CloseInfoCommand = new RelayCommand(() => IsInfoPopupOpen = false);
         }
 
         public string Title
@@ -50,10 +53,18 @@ namespace Chronocinema.ViewModels
             }
         }
 
+        public bool IsInfoPopupOpen
+        {
+            get => _isInfoPopupOpen;
+            set => SetProperty(ref _isInfoPopupOpen, value);
+        }
+
         public ICommand SearchCommand { get; }
         public ICommand GoBackCommand { get; }
         public ICommand NavigateToHomeCommand { get; }
         public ICommand NavigateToWatchlistCommand { get; }
+        public ICommand ShowInfoCommand { get; }
+        public ICommand CloseInfoCommand { get; }
 
         private async Task ExecuteSearch()
         {

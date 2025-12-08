@@ -12,6 +12,7 @@
     <UserControl.Resources>
         <converters:BooleanToSearchingConverter x:Key="BooleanToSearchingConverter"/>
         <converters:StringToVisibilityConverter x:Key="StringToVisibilityConverter"/>
+        <converters:StringIsNullOrEmptyToVisibilityConverter x:Key="StringIsNullOrEmptyToVisibilityConverter"/>
     </UserControl.Resources>
     
     <Grid>
@@ -30,6 +31,7 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
 
                 <!-- Back Button -->
@@ -46,6 +48,15 @@
                            VerticalAlignment="Center" 
                            TextTrimming="CharacterEllipsis" 
                            Margin="10,0"/>
+
+                <Button Grid.Column="2"
+                        Style="{StaticResource IconButtonStyle}"
+                        Command="{Binding ShowInfoCommand}"
+                        Margin="10,0"
+                        Width="30" Height="30"
+                        ToolTip="Show help">
+                    <Image Source="/Chronocinema;component/Images/info.png"/>
+                </Button>
             </Grid>
         </Border>
         
@@ -53,13 +64,18 @@
         <StackPanel Grid.Row="1" Style="{StaticResource AddMediaStackPanelStyle}">
             
             <!-- Title Input -->
-            <TextBox x:Name="TitleTextBox"
-                     Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}"
-                     Style="{StaticResource ModernTextBox}"
-                     Height="40"
-                     FontSize="16"
-                     Margin="0,0,0,20"/>
-            
+            <Grid Margin="0,0,0,20">
+                <TextBox x:Name="TitleTextBox"
+                         Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}"
+                         Style="{StaticResource ModernTextBox}"
+                         Height="40"
+                         FontSize="16"/>
+                <TextBlock Text="Enter title of movie or series"
+                           Style="{StaticResource PlaceholderTextStyle}"
+                           Margin="12,0,0,0"
+                           Visibility="{Binding Title, Converter={StaticResource StringIsNullOrEmptyToVisibilityConverter}}"/>
+            </Grid>
+
             <!-- Add Button -->
             <Button Content="{Binding IsSearching, Converter={StaticResource BooleanToSearchingConverter}}"
                     Command="{Binding SearchCommand}"
@@ -113,6 +129,49 @@
                     </Border>
                     <TextBlock Text="Watchlist" Style="{StaticResource NavItemText}" Margin="0,2,0,0"/>
                 </StackPanel>
+
+                <Popup x:Name="InfoPopup"
+                       Style="{StaticResource PopupStyle}"
+                       PlacementTarget="{Binding ElementName=TitleTextBox}"
+                       IsOpen="{Binding IsInfoPopupOpen}">
+                    <Border Style="{StaticResource PopupBorderStyle}">
+                        <StackPanel>
+                            <TextBlock Text="How to add media:"
+                                       Style="{StaticResource SubHeaderText}"
+                                       Margin="0,0,0,16"/>
+                            <StackPanel Style="{StaticResource PopupMainStackPanelStyle}">
+                                <StackPanel Style="{StaticResource PopupInnerStackPanelStyle}">
+                                    <TextBlock Text="1. "
+                                               Style="{StaticResource PopupBodyTextStyle}"
+                                               Margin="0,0,0,5"/>
+                                    <TextBlock Text="Type the movie or series title in the field"
+                                               Style="{StaticResource PopupBodyTextStyle}"/>
+                                </StackPanel>
+                                <StackPanel Style="{StaticResource PopupInnerStackPanelStyle}">
+                                    <TextBlock Text="2. "
+                                               Style="{StaticResource PopupBodyTextStyle}"
+                                               Margin="0,0,0,5"/>
+                                    <TextBlock Text="The system will automatically search our database"
+                                               Style="{StaticResource PopupBodyTextStyle}"/>
+                                </StackPanel>
+                                <StackPanel Style="{StaticResource PopupInnerStackPanelStyle}"
+                                            Margin="0,0,0,16">
+                                    <TextBlock Text="3. "
+                                               Style="{StaticResource PopupBodyTextStyle}"
+                                               Margin="0,0,0,5"/>
+                                    <TextBlock Text="If found, it will be added to your collection"
+                                               Style="{StaticResource PopupBodyTextStyle}"/>
+                                </StackPanel>
+                                <Button Content="Got it!"
+                                        Command="{Binding CloseInfoCommand}"
+                                        Style="{StaticResource PrimaryActionButton}"
+                                        HorizontalAlignment="Center"
+                                        Width="100"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </Popup>
+                
             </Grid>
         </Border>
 
