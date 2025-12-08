@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using Chronocinema.Services;
+using System.Windows;
 
 namespace Chronocinema
 {
@@ -10,6 +11,7 @@ namespace Chronocinema
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
+            var toastService = new ToastService();
         }
     }
 

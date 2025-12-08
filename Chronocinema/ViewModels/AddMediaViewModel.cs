@@ -12,11 +12,13 @@ namespace Chronocinema.ViewModels
         private readonly IAuthService _authService;
         private readonly IUserService _userService;
         private bool _isInfoPopupOpen;
+        private readonly IToastService _toastService;
 
         public AddMediaViewModel()
         {
             _authService = AuthService.Instance;
             _userService = UserService.Instance;
+            _toastService = new ToastService();
 
             SearchCommand = new RelayCommand(async () => await ExecuteSearch(), () => !string.IsNullOrWhiteSpace(Title) && !IsSearching);
             GoBackCommand = new RelayCommand(ExecuteGoBack);
@@ -89,6 +91,9 @@ namespace Chronocinema.ViewModels
                     var detailViewModel = new DetailViewModel(mediaItem);
 
                     LocatorViewModel.Instance.DetailViewModel = detailViewModel;
+
+                    _toastService.ShowToast($"{mediaItem.Title} was successfully added!");
+
                     NavigationService.Instance.NavigateTo(new DetailScreen { DataContext = detailViewModel });
                 }
                 else

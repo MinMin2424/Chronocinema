@@ -108,7 +108,7 @@
     "Id": 8,
     "Title": "Frankenstein",
     "Type": 0,
-    "Status": 2,
+    "Status": 3,
     "Rating": 0,
     "Notes": "",
     "StartDate": null,
@@ -148,5 +148,20 @@
     "Genre": "Drama, Fantasy, Horror",
     "Country": "United States",
     "Language": "English"
+  },
+  {
+    "Id": 11,
+    "Title": "Doraemon",
+    "Type": 1,
+    "Status": 2,
+    "Rating": 0,
+    "Notes": "",
+    "StartDate": null,
+    "EndDate": null,
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BOTE4ZjlkOWYtZDViYy00ZmZlLTkyMmQtZjNiNTBjMzBiNDA0XkEyXkFqcGc@._V1_SX300.jpg",
+    "Year": "1979\u20132005",
+    "Genre": "Animation, Adventure, Comedy",
+    "Country": "Japan",
+    "Language": "Japanese"
   }
 ]

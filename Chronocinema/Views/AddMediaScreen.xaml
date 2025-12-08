@@ -130,50 +130,53 @@
                     <TextBlock Text="Watchlist" Style="{StaticResource NavItemText}" Margin="0,2,0,0"/>
                 </StackPanel>
 
-                <Popup x:Name="InfoPopup"
-                       Style="{StaticResource PopupStyle}"
-                       PlacementTarget="{Binding ElementName=TitleTextBox}"
-                       IsOpen="{Binding IsInfoPopupOpen}">
-                    <Border Style="{StaticResource PopupBorderStyle}">
-                        <StackPanel>
-                            <TextBlock Text="How to add media:"
-                                       Style="{StaticResource SubHeaderText}"
-                                       Margin="0,0,0,16"/>
-                            <StackPanel Style="{StaticResource PopupMainStackPanelStyle}">
-                                <StackPanel Style="{StaticResource PopupInnerStackPanelStyle}">
-                                    <TextBlock Text="1. "
-                                               Style="{StaticResource PopupBodyTextStyle}"
-                                               Margin="0,0,0,5"/>
-                                    <TextBlock Text="Type the movie or series title in the field"
-                                               Style="{StaticResource PopupBodyTextStyle}"/>
-                                </StackPanel>
-                                <StackPanel Style="{StaticResource PopupInnerStackPanelStyle}">
-                                    <TextBlock Text="2. "
-                                               Style="{StaticResource PopupBodyTextStyle}"
-                                               Margin="0,0,0,5"/>
-                                    <TextBlock Text="The system will automatically search our database"
-                                               Style="{StaticResource PopupBodyTextStyle}"/>
-                                </StackPanel>
-                                <StackPanel Style="{StaticResource PopupInnerStackPanelStyle}"
-                                            Margin="0,0,0,16">
-                                    <TextBlock Text="3. "
-                                               Style="{StaticResource PopupBodyTextStyle}"
-                                               Margin="0,0,0,5"/>
-                                    <TextBlock Text="If found, it will be added to your collection"
-                                               Style="{StaticResource PopupBodyTextStyle}"/>
-                                </StackPanel>
-                                <Button Content="Got it!"
-                                        Command="{Binding CloseInfoCommand}"
-                                        Style="{StaticResource PrimaryActionButton}"
-                                        HorizontalAlignment="Center"
-                                        Width="100"/>
-                            </StackPanel>
-                        </StackPanel>
-                    </Border>
-                </Popup>
-                
             </Grid>
         </Border>
+
+        <Popup x:Name="InfoPopup"
+               Style="{StaticResource PopupStyle}"
+               PlacementTarget="{Binding ElementName=TitleTextBox}"
+               IsOpen="{Binding IsInfoPopupOpen}"
+               Placement="Center"
+               HorizontalOffset="0"
+               VerticalOffset="50">
+            <Border Style="{StaticResource PopupBorderStyle}">
+                <StackPanel>
+                    <TextBlock Text="How to add media:"
+                               Style="{StaticResource SubHeaderText}"
+                               Margin="0,0,0,16"/>
+                    <StackPanel Style="{StaticResource PopupMainStackPanelStyle}">
+                        <StackPanel Style="{StaticResource PopupInnerStackPanelStyle}">
+                            <TextBlock Text="1. "
+                                       Style="{StaticResource PopupBodyTextStyle}"
+                                       Margin="0,0,0,5"/>
+                            <TextBlock Text="Type the movie or series title in the field"
+                                       Style="{StaticResource PopupBodyTextStyle}"/>
+                        </StackPanel>
+                        <StackPanel Style="{StaticResource PopupInnerStackPanelStyle}">
+                            <TextBlock Text="2. "
+                                       Style="{StaticResource PopupBodyTextStyle}"
+                                       Margin="0,0,0,5"/>
+                            <TextBlock Text="The system will automatically search our database"
+                                       Style="{StaticResource PopupBodyTextStyle}"/>
+                        </StackPanel>
+                        <StackPanel Style="{StaticResource PopupInnerStackPanelStyle}"
+                                    Margin="0,0,0,16">
+                            <TextBlock Text="3. "
+                                       Style="{StaticResource PopupBodyTextStyle}"
+                                       Margin="0,0,0,5"/>
+                            <TextBlock Text="If found, it will be added to your collection"
+                                       Style="{StaticResource PopupBodyTextStyle}"/>
+                        </StackPanel>
+                        <Button Content="Got it!"
+                                Command="{Binding CloseInfoCommand}"
+                                Style="{StaticResource PrimaryActionButton}"
+                                HorizontalAlignment="Center"
+                                Width="100"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Popup>
 
     </Grid>
     

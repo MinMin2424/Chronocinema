@@ -11,11 +11,14 @@ namespace Chronocinema.ViewModels
         private MediaItem _originalMediaItem;
         private readonly IAuthService _authService;
         private readonly IUserService _userService;
+        private readonly IToastService _toastService;
 
         public EditViewModel(MediaItem mediaItem)
         {
             _authService = AuthService.Instance;
             _userService = UserService.Instance;
+            _toastService = new ToastService();
+
             _originalMediaItem = new MediaItem
             {
                 Id = mediaItem.Id,
@@ -84,6 +87,7 @@ namespace Chronocinema.ViewModels
                     existingItem.Notes = MediaItem.Notes;
                 }
                 LocatorViewModel.Instance.WatchlistViewModel.RefreshWatchlist();
+                _toastService.ShowToast($"Changes were successfully saved!");
             }
             var detailViewModel = new DetailViewModel(MediaItem);
             LocatorViewModel.Instance.DetailViewModel = detailViewModel;
