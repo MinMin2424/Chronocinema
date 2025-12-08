@@ -210,11 +210,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 210,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Document",
@@ -226,8 +234,7 @@
               "RelativeToolTip": "Chronocinema\\Services\\IAuthService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFgAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T15:30:12.996Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-27T15:30:12.996Z"
             },
             {
               "$type": "Document",
@@ -239,8 +246,7 @@
               "RelativeToolTip": "Chronocinema\\Services\\IUserService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T15:44:54.417Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-27T15:44:54.417Z"
             },
             {
               "$type": "Document",
@@ -252,8 +258,7 @@
               "RelativeToolTip": "Chronocinema\\ViewModels\\MainViewModel.cs",
               "ViewState": "AgIAAB8BAAAAAAAAAAAYwAIAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-28T12:36:50.86Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-28T12:36:50.86Z"
             },
             {
               "$type": "Document",
@@ -265,8 +270,7 @@
               "RelativeToolTip": "Chronocinema\\ViewModels\\ProfileViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T16:17:46.095Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-27T16:17:46.095Z"
             },
             {
               "$type": "Document",
@@ -276,14 +280,10 @@
               "RelativeDocumentMoniker": "Chronocinema\\Views\\MainScreen.xaml.cs",
               "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Views\\MainScreen.xaml.cs",
               "RelativeToolTip": "Chronocinema\\Views\\MainScreen.xaml.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwAAAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAgwAAAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-25T18:07:41.174Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Document",
@@ -295,8 +295,7 @@
               "RelativeToolTip": "Chronocinema\\Models\\User.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAgwA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T17:35:42.525Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T17:35:42.525Z"
             },
             {
               "$type": "Document",
@@ -308,8 +307,7 @@
               "RelativeToolTip": "Chronocinema\\Views\\RegisterScreen.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T17:21:58.153Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-08T17:21:58.153Z"
             },
             {
               "$type": "Document",
@@ -321,8 +319,7 @@
               "RelativeToolTip": "Chronocinema\\Views\\EditMediaScreen.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T00:08:34.301Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-27T00:08:34.301Z"
             },
             {
               "$type": "Document",
@@ -334,8 +331,7 @@
               "RelativeToolTip": "Chronocinema\\ViewModels\\RegisterViewModel.cs",
               "ViewState": "AgIAAE0AAAAAAAAAAAAUwA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T16:07:47.731Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-27T16:07:47.731Z"
             },
             {
               "$type": "Document",
@@ -347,8 +343,7 @@
               "RelativeToolTip": "Chronocinema\\ViewModels\\LoginViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T15:58:27.726Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-27T15:58:27.726Z"
             },
             {
               "$type": "Document",
@@ -360,8 +355,7 @@
               "RelativeToolTip": "Chronocinema\\Services\\NavigationService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T22:35:59.758Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-25T22:35:59.758Z"
             },
             {
               "$type": "Document",
@@ -373,8 +367,7 @@
               "RelativeToolTip": "Chronocinema\\ViewModels\\DetailViewModel.cs",
               "ViewState": "AgIAAEUAAAAAAAAAAAAqwF8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T21:47:07.512Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-25T21:47:07.512Z"
             },
             {
               "$type": "Document",
@@ -385,8 +378,7 @@
               "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Styles\\Screens\\DetailScreenStyles.xaml",
               "RelativeToolTip": "Chronocinema\\Styles\\Screens\\DetailScreenStyles.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-08T17:00:08.764Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-08T17:00:08.764Z"
             },
             {
               "$type": "Document",
@@ -397,8 +389,7 @@
               "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\MainWindow.xaml",
               "RelativeToolTip": "Chronocinema\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-26T23:51:23.354Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T23:51:23.354Z"
             },
             {
               "$type": "Document",
@@ -410,8 +401,7 @@
               "RelativeToolTip": "Chronocinema\\MainWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T18:07:34.087Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-25T18:07:34.087Z"
             },
             {
               "$type": "Document",
@@ -446,8 +436,7 @@
               "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\App.xaml",
               "RelativeToolTip": "Chronocinema\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-27T13:12:32.137Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-27T13:12:32.137Z"
             },
             {
               "$type": "Document",
@@ -601,8 +590,7 @@
               "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Styles\\Components\\DeleteDialogStyles.xaml",
               "RelativeToolTip": "Chronocinema\\Styles\\Components\\DeleteDialogStyles.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-28T12:35:57.467Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-28T12:35:57.467Z"
             },
             {
               "$type": "Document",
@@ -695,8 +683,7 @@
               "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Styles\\Typography.xaml",
               "RelativeToolTip": "Chronocinema\\Styles\\Typography.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-26T13:36:55.488Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T13:36:55.488Z"
             },
             {
               "$type": "Document",
@@ -707,8 +694,7 @@
               "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Styles\\Screens\\MainScreenStyles.xaml",
               "RelativeToolTip": "Chronocinema\\Styles\\Screens\\MainScreenStyles.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-27T13:21:40.447Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-27T13:21:40.447Z"
             },
             {
               "$type": "Document",
@@ -752,8 +738,7 @@
               "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Styles\\ComponentStyles.xaml",
               "RelativeToolTip": "Chronocinema\\Styles\\ComponentStyles.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-26T13:05:02.154Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T13:05:02.154Z"
             },
             {
               "$type": "Document",
@@ -764,8 +749,7 @@
               "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Styles\\Screens\\EditMediaScreenStyles.xaml",
               "RelativeToolTip": "Chronocinema\\Styles\\Screens\\EditMediaScreenStyles.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-27T18:12:38.812Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-27T18:12:38.812Z"
             },
             {
               "$type": "Document",
@@ -798,8 +782,7 @@
               "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Styles\\Screens\\AddMediaScreenStyles.xaml",
               "RelativeToolTip": "Chronocinema\\Styles\\Screens\\AddMediaScreenStyles.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-26T12:53:23.839Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T12:53:23.839Z"
             },
             {
               "$type": "Document",
@@ -821,8 +804,7 @@
               "ToolTip": "C:\\Users\\minat\\OneDrive\\FEL_CVUT\\5semestr\\IUR\\Chronocinema\\Chronocinema\\Styles\\Screens\\WatchlistScreenStyles.xaml",
               "RelativeToolTip": "Chronocinema\\Styles\\Screens\\WatchlistScreenStyles.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-26T12:58:07.317Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T12:58:07.317Z"
             }
           ]
         }
