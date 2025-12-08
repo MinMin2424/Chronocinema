@@ -188,5 +188,13 @@
     "PasswordHash": "7NcYcNGWMxapfjrDQIyYNa2M8PPBvHA1J8MCZVNPda4=",
     "RegistrationDate": "2025-11-27T19:18:05.9154748+01:00",
     "MediaItems": []
+  },
+  {
+    "Id": 4,
+    "UserName": "Mina Tranov\u00E1",
+    "Email": "mina@test.com",
+    "PasswordHash": "Z46C2QfT5ucfgdXPPdrMNnHcYYw4obep\u002BTk6g9AlspY=",
+    "RegistrationDate": "2025-12-08T18:23:35.8430676+01:00",
+    "MediaItems": []
   }
 ]
